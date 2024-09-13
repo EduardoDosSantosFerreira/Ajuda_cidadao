@@ -30,3 +30,22 @@
             alert('Por favor, preencha todos os campos!');
         }
     }
+
+    function formatName(input) {
+        // Remove qualquer caractere que não seja uma letra
+        input.value = input.value.replace(/[^a-zA-Z\s]/g, '');
+    
+        // Capitaliza a primeira letra de cada palavra
+        input.value = input.value.replace(/\b\w/g, char => char.toUpperCase());
+    }
+    
+    function validateCPF(input) {
+        // Remove caracteres não numéricos
+        input.value = input.value.replace(/\D/g, '');
+    
+        // Verifica se o comprimento é 11
+        if (input.value.length > 11) {
+            input.value = input.value.slice(0, 11);
+        }
+    }
+    

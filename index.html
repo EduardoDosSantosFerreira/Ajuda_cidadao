@@ -49,8 +49,8 @@
     <br>
     <br>
     <form id="helpForm">
-        <input type="text" id="nome" placeholder="Nome completo" required>
-        <input type="text" id="cpf" placeholder="CPF" required>
+        <input type="text" id="nome" placeholder="Nome completo" required oninput="formatName(this)">
+        <input type="text" id="cpf" placeholder="CPF" maxlength="11" required oninput="validateCPF(this)">
         <select id="problema" required>
             <option value="" disabled selected>Selecione o problema</option>
             <option value="Problema com pagamento">Problema com pagamento</option>
