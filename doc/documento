@@ -1,0 +1,110 @@
+# Relatório Completo do Site **Ajuda Cidadão**
+
+Este relatório descreve a estrutura e funcionamento do site **Ajuda Cidadão**, abordando suas tecnologias, organização, layout, funcionalidades e design.
+
+## Informações Gerais
+- **Título do site**: Ajuda Cidadão
+- **Favicon**: Imagem PNG de 30x30 pixels localizada na pasta `../assets/img/logotipo_sem_fundo/6 (2).png`
+- **Fontes personalizadas**: Comfortaa-Bold
+- **Bibliotecas**:
+  - Bootstrap 5.3.0-alpha1 (CDN)
+  - FontAwesome 6.0.0-beta3 (CDN)
+  - jQuery 3.5.1 (CDN)
+
+## Estrutura HTML
+### Cabeçalho `<head>`
+O cabeçalho do site define as configurações de exibição, compatibilidade e carregamento de estilos. 
+
+- **Charset**: UTF-8
+- **Viewport**: Configurado para dispositivos móveis, ajustando a escala de zoom
+- **Compatibilidade**: Especificado para o IE (Internet Explorer)
+- **Bibliotecas externas**:
+  - Bootstrap CSS e JavaScript (para design responsivo e componentes)
+  - FontAwesome (para ícones de redes sociais e outros ícones visuais)
+
+### Seções do Site
+
+#### 1. **Navbar (Barra de Navegação)**
+A navbar é fixa no topo da página, desaparecendo quando o usuário faz scroll para baixo e reaparecendo ao rolar para cima. Esta barra contém links para as principais seções do site:
+- **Início**
+- **Serviços**
+- **Contato**
+- **Perguntas Frequentes**
+
+Além disso, o logotipo da empresa está presente no lado esquerdo da barra, redimensionado para `250xauto`.
+
+- **Comportamento responsivo**: Quando a tela é menor, o botão de "hambúrguer" aparece para abrir/fechar o menu colapsado.
+- **Estilos personalizados**: O fundo da navbar é branco, e os links mudam de cor quando o mouse é posicionado sobre eles.
+
+#### 2. **Seção Perguntas Frequentes (FAQ)**
+Esta seção contém perguntas e respostas frequentes sobre os serviços da empresa, utilizando o componente accordion do Bootstrap para colapsar as respostas.
+- **Perguntas incluídas**:
+  1. Vocês têm loja física?
+  2. O que é necessário para consultar se o empréstimo é liberado?
+  3. Vocês fazem empréstimo na conta de luz?
+  4. Vocês atendem apenas com Presencial?
+
+Cada pergunta está dentro de um card, cuja cor do cabeçalho é **amarelo (#FEC260)** com borda verde água. O corpo de cada card é exibido ou ocultado quando o botão é clicado.
+
+#### 3. **Rodapé (Footer)**
+O rodapé está localizado no final da página e é dividido em três colunas:
+- **Sobre Nós**: Texto sobre a missão da empresa, destacando o apoio oferecido aos clientes em decisões financeiras.
+- **Links Rápidos**: Uma lista de links úteis, como:
+  - Início
+  - Serviços
+  - Contato
+  - Sobre Nós
+  - Política de Privacidade
+- **Contato**: Informações de contato, incluindo e-mail, telefone e endereço físico.
+
+Além disso, há ícones das redes sociais (Facebook, Instagram e LinkedIn), cada um com links para as respectivas páginas. Os ícones são gerados pelo FontAwesome e ficam localizados no lado direito do rodapé.
+
+### Estilos Personalizados (CSS)
+O site utiliza CSS personalizado além dos estilos fornecidos pelo Bootstrap. Algumas das personalizações incluem:
+
+- **Fonte personalizada**: Comfortaa-Bold é usada como fonte principal, fornecendo um toque moderno e leve ao design.
+- **Cores principais**: 
+  - Texto: **#2A0944** (roxo escuro)
+  - Borda dos cards: **#3FA796** (verde água)
+  - Fundo do card-header: **#FEC260** (amarelo)
+  - Fundo do rodapé: **#343a40** (cinza escuro)
+- **Navbar**: Transparente no topo da página, e desaparece conforme o usuário rola para baixo.
+- **Footer**: Um fundo escuro com textos e ícones em cores claras, onde os links mudam para azul quando o usuário passa o mouse sobre eles.
+
+#### Responsividade
+O site é completamente responsivo, utilizando as grades do Bootstrap e media queries para ajustar o layout em dispositivos de diferentes tamanhos. A navbar colapsa em um menu de ícones em dispositivos menores, enquanto o layout do FAQ e do rodapé se adapta bem a telas pequenas.
+
+### Scripts e Funcionalidades
+
+#### 1. **Navbar Escondida ao Rolar**
+Há um script JavaScript que esconde a navbar quando o usuário rola a página para baixo e a exibe quando o usuário começa a rolar para cima. Esse efeito é controlado por JavaScript, que monitora a posição atual e anterior de rolagem, ajustando a visibilidade da barra de navegação de acordo.
+
+```javascript
+let prevScrollPos = window.pageYOffset;
+const navbar = document.querySelector('.navbar');
+
+window.onscroll = function () {
+    const currentScrollPos = window.pageYOffset;
+
+    if (prevScrollPos < currentScrollPos) {
+        navbar.style.top = "-100px"; // Esconde a navbar
+    } else {
+        navbar.style.top = "0"; // Mostra a navbar
+    }
+
+    prevScrollPos = currentScrollPos;
+};
+```
+
+#### 2. **Accordion (FAQ)**
+A funcionalidade de exibir e ocultar as respostas das perguntas frequentes é gerenciada pelo componente **accordion** do Bootstrap. O uso de Bootstrap elimina a necessidade de scripts complexos para manipular o DOM.
+
+#### 3. **Redes Sociais**
+Os ícones das redes sociais no rodapé são interativos, permitindo que o usuário acesse as páginas do Facebook, Instagram e LinkedIn da empresa.
+
+### Considerações Finais
+O site **Ajuda Cidadão** utiliza uma combinação eficaz de Bootstrap para responsividade e layout, FontAwesome para ícones, e estilos personalizados para garantir um design único e alinhado com a identidade visual da empresa. As funcionalidades, como o FAQ interativo e o desaparecimento da navbar ao rolar a página, proporcionam uma experiência fluida e moderna para os usuários.
+
+---
+
+Essa documentação fornece uma visão completa da estrutura e funcionalidades do site, facilitando futuras manutenções ou expansões.

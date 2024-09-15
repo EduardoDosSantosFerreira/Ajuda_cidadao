@@ -8,7 +8,7 @@
     <title>Ajuda Cidadão</title>
     <link rel="icon" type="image/png" sizes="30x30" href="assets/img/logotipo_sem_fundo/6 (2).png">
     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- FontAwesome CSS (para os ícones) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Seu arquivo de estilo CSS -->
@@ -19,10 +19,10 @@
 <body> <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container"> <!-- Logo da Empresa --> <a class="navbar-brand" href="#"> <img
-                    src="assets/img/logotipo_sem_fundo/1 (2).png" alt="Logo Ajuda Cidadão" width="250"
-                    height="auto"> </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                    src="assets/img/logotipo_sem_fundo/1 (2).png" alt="Logo Ajuda Cidadão" width="250" height="auto">
+            </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="navbar-toggler-icon"></span> </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"> <a class="nav-link" href="index.html">Início</a> </li>
@@ -33,92 +33,102 @@
                 </ul>
             </div>
         </div>
-    </nav> 
+    </nav>
     <!-- Hero Section -->
     <section class="hero text-white text-center">
         <div class="container text-center mt-5">
             <h2 class="display-5" data-aos="fade-down">Bem-vindo a Ajuda Cidadão</h2>
-            <p class="lead" data-aos="fade-top">Oferecemos soluções personalizadas para você alcançar seus objetivos financeiros.</p>
+            <p class="lead" data-aos="fade-top">Oferecemos soluções personalizadas para você alcançar seus objetivos
+                financeiros.</p>
             <button class="btn btn-light btn-lg mt-3" onclick="mostrarFormulario()">Como podemos te Ajudar?</button>
         </div>
-        
+
         <!-- Formulário que aparece ao clicar no botão -->
-<div class="form-popup" id="formHelp">
-    <h2 style="color: #FEC260;">Preencha Algumas Informações</h2>
-    <img src="assets/img/logotipo_sem_fundo/6 (2).png" style="width: 50px;" alt="Logo da empresa">
-    <br>
-    <br>
-    <form id="helpForm">
-        <input type="text" id="nome" placeholder="Nome completo" required oninput="formatName(this)">
-        <input type="text" id="cpf" placeholder="CPF" maxlength="11" required oninput="validateCPF(this)">
-        <select id="problema" required>
-            <option value="" disabled selected>Selecione o problema</option>
-            <option value="Problema com pagamento">Problema com pagamento</option>
-            <option value="Dificuldade de acesso">Dificuldade de acesso</option>
-            <option value="Empréstimo INSS">Empréstimo INSS</option>
-            <option value="Empréstimo Pessoal">Empréstimo Pessoal</option>
-            <option value="FGTS">FGTS</option>
-            <option value="Aposentadoria">Aposentadoria</option>
-            <option value="Advocacia">Advocacia</option>
-            <option value="Parcerias">Parcerias</option>
-            <option value="Outros">Outros</option>
-        </select>
-        <button type="button" onclick="enviarWhatsApp()">Enviar pelo WhatsApp</button>
-        <button type="button" class="close-btn" onclick="fecharFormulario()">Fechar</button>
-    </form>
-</div>
-        
+        <div class="form-popup" id="formHelp">
+            <h2 style="color: #FEC260;">Preencha Algumas Informações</h2>
+            <img src="assets/img/logotipo_sem_fundo/6 (2).png" style="width: 50px;" alt="Logo da empresa">
+            <br>
+            <br>
+            <form id="helpForm">
+                <input type="text" id="nome" placeholder="Nome completo" required oninput="formatName(this)">
+                <input type="text" id="cpf" placeholder="CPF" maxlength="11" required oninput="validateCPF(this)">
+                <select id="problema" required>
+                    <option value="" disabled selected>Selecione o problema</option>
+                    <option value="Problema com pagamento">Problema com pagamento</option>
+                    <option value="Dificuldade de acesso">Dificuldade de acesso</option>
+                    <option value="Empréstimo INSS">Empréstimo INSS</option>
+                    <option value="Empréstimo Pessoal">Empréstimo Pessoal</option>
+                    <option value="FGTS">FGTS</option>
+                    <option value="Aposentadoria">Aposentadoria</option>
+                    <option value="Advocacia">Advocacia</option>
+                    <option value="Parcerias">Parcerias</option>
+                    <option value="Outros">Outros</option>
+                </select>
+                <button type="button" onclick="enviarWhatsApp()">Enviar pelo WhatsApp</button>
+                <button type="button" class="close-btn" onclick="fecharFormulario()">Fechar</button>
+            </form>
+        </div>
+
     </section> <!-- Serviços -->
     <section id="servicos" class="py-5">
         <div class="container text-center">
             <h2 class="mb-5" data-aos="fade-down">Nossos Serviços</h2>
             <div class="row gy-4" id="servicos-container"> <!-- Serviços principais -->
                 <div class="col-md-4" data-aos="fade-down">
-                    <div class="card service-card shadow-sm h-100" onclick="contactUs('Empréstimo Consignado', 'Ajudamos você a tomar decisões financeiras inteligentes com base em suas metas pessoais.')">
+                    <div class="card service-card shadow-sm h-100"
+                        onclick="contactUs('Empréstimo Consignado', 'Ajudamos você a tomar decisões financeiras inteligentes com base em suas metas pessoais.')">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#FEC260;" class="fas fa-hand-holding-usd fa-3x"></i>
                             </div>
                             <h5 class="card-title">Empréstimo Consignado</h5>
-                            <p class="card-text">Ajudamos você a tomar decisões financeiras inteligentes com base em suas metas pessoais.</p>
+                            <p class="card-text">Ajudamos você a tomar decisões financeiras inteligentes com base em
+                                suas metas pessoais.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-down">
-                    <div class="card service-card shadow-sm h-100" onclick="contactUs('Empréstimo Pessoal', 'Maximize seus retornos com nossas estratégias de investimento sob medida para seu perfil.')">
+                    <div class="card service-card shadow-sm h-100"
+                        onclick="contactUs('Empréstimo Pessoal', 'Maximize seus retornos com nossas estratégias de investimento sob medida para seu perfil.')">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#FEC260;" class="fas fa-wallet fa-3x"></i>
                             </div>
                             <h5 class="card-title">Empréstimo Pessoal</h5>
-                            <p class="card-text">Maximize seus retornos com nossas estratégias de investimento sob medida para seu perfil.</p>
+                            <p class="card-text">Maximize seus retornos com nossas estratégias de investimento sob
+                                medida para seu perfil.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-down">
-                    <div class="card service-card shadow-sm h-100" onclick="contactUs('Ponto do INSS', 'Aprenda a gerenciar seu dinheiro com nossos cursos e workshops práticos.')">
+                    <div class="card service-card shadow-sm h-100"
+                        onclick="contactUs('Ponto do INSS', 'Aprenda a gerenciar seu dinheiro com nossos cursos e workshops práticos.')">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#FEC260;" class="fas fa-university fa-3x"></i>
                             </div>
                             <h5 class="card-title">Ponto do INSS</h5>
-                            <p class="card-text">Aprenda a gerenciar seu dinheiro com nossos cursos e workshops práticos.</p>
+                            <p class="card-text">Aprenda a gerenciar seu dinheiro com nossos cursos e workshops
+                                práticos.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-top">
-                    <div class="card service-card shadow-sm h-100" onclick="contactUs('Pensão por Morte', 'Nossos especialistas guiam você por momentos delicados com soluções financeiras.')">
+                    <div class="card service-card shadow-sm h-100"
+                        onclick="contactUs('Pensão por Morte', 'Nossos especialistas guiam você por momentos delicados com soluções financeiras.')">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#FEC260;" class="fas fa-heartbeat fa-3x"></i>
                             </div>
                             <h5 class="card-title">Pensão por Morte</h5>
-                            <p class="card-text">Nossos especialistas guiam você por momentos delicados com soluções financeiras.</p>
+                            <p class="card-text">Nossos especialistas guiam você por momentos delicados com soluções
+                                financeiras.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-top">
-                    <div class="card service-card shadow-sm h-100" onclick="contactUs('Aposentadorias', 'Orientamos você sobre como maximizar seus direitos e benefícios.')">
+                    <div class="card service-card shadow-sm h-100"
+                        onclick="contactUs('Aposentadorias', 'Orientamos você sobre como maximizar seus direitos e benefícios.')">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#FEC260;" class="fas fa-user-tie fa-3x"></i>
@@ -129,7 +139,8 @@
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-top">
-                    <div class="card service-card shadow-sm h-100" onclick="contactUs('Refinanciamento de dívidas', 'Oferecemos um plano personalizado para organizar suas finanças.')">
+                    <div class="card service-card shadow-sm h-100"
+                        onclick="contactUs('Refinanciamento de dívidas', 'Oferecemos um plano personalizado para organizar suas finanças.')">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#FEC260;" class="fas fa-coins fa-3x"></i>
@@ -142,18 +153,21 @@
             </div> <!-- Mais serviços (inicialmente ocultos) -->
             <div class="row gy-4 mt-4" id="servicos-extra" style="display: none;">
                 <div class="col-md-4">
-                    <div class="card service-card shadow-sm h-100" onclick="contactUs('Empréstimo na Máquina de cartão de crédito', 'Consultoria personalizada para suas finanças pessoais e empresariais.')">
+                    <div class="card service-card shadow-sm h-100"
+                        onclick="contactUs('Empréstimo na Máquina de cartão de crédito', 'Consultoria personalizada para suas finanças pessoais e empresariais.')">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#3FA796;" class="fas fa-chart-line fa-3x"></i>
                             </div>
                             <h5 class="card-title">Empréstimo na Máquina de cartão de crédito</h5>
-                            <p class="card-text">Consultoria personalizada para suas finanças pessoais e empresariais.</p>
+                            <p class="card-text">Consultoria personalizada para suas finanças pessoais e empresariais.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card service-card shadow-sm h-100" onclick="contactUs('Auxílio Doença', 'Cursos de educação financeira para todos os níveis.')">
+                    <div class="card service-card shadow-sm h-100"
+                        onclick="contactUs('Auxílio Doença', 'Cursos de educação financeira para todos os níveis.')">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#3FA796;" class="fas fa-piggy-bank fa-3x"></i>
@@ -164,7 +178,8 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card service-card shadow-sm h-100" onclick="contactUs('Auxílio Reclusão', 'Ajuda na compra do seu imóvel com as melhores condições.')">
+                    <div class="card service-card shadow-sm h-100"
+                        onclick="contactUs('Auxílio Reclusão', 'Ajuda na compra do seu imóvel com as melhores condições.')">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#3FA796;" class="fas fa-home fa-3x"></i>
@@ -175,7 +190,8 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card service-card shadow-sm h-100" onclick="contactUs('Agendamentos', 'Proteja seus bens com os melhores seguros disponíveis no mercado.')">
+                    <div class="card service-card shadow-sm h-100"
+                        onclick="contactUs('Agendamentos', 'Proteja seus bens com os melhores seguros disponíveis no mercado.')">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#3FA796;" class="fas fa-book fa-3x"></i>
@@ -186,7 +202,8 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card service-card shadow-sm h-100" onclick="contactUs('Portabilidade', 'Financiamento de veículos novos e usados com taxas atrativas.')">
+                    <div class="card service-card shadow-sm h-100"
+                        onclick="contactUs('Portabilidade', 'Financiamento de veículos novos e usados com taxas atrativas.')">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#3FA796;" class="fas fa-car fa-3x"></i>
@@ -197,7 +214,8 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card service-card shadow-sm h-100" onclick="contactUs('Pagamento de Conta', 'Apoio no planejamento da sua carreira profissional.')">
+                    <div class="card service-card shadow-sm h-100"
+                        onclick="contactUs('Pagamento de Conta', 'Apoio no planejamento da sua carreira profissional.')">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#3FA796;" class="fas fa-briefcase fa-3x"></i>
@@ -220,23 +238,26 @@
             <div class="row align-items-center">
                 <!-- Coluna da Imagem -->
                 <div class="col-md-6">
-                    <img src="assets/img/images/pexels-photo-7979597.jpg" class="img-fluid rounded" alt="Placeholder Image" data-aos="fade-right" >
+                    <img src="assets/img/images/pexels-photo-7979597.jpg" class="img-fluid rounded"
+                        alt="Placeholder Image" data-aos="fade-right">
                 </div>
                 <!-- Coluna de Informação -->
                 <div class="col-md-6">
                     <br>
                     <h2>NOSSA MISSÃO</h2>
-                    <p>Gerar valor e satisfação a clientes, colaboradores e parceiros, atingindo a excelência de maneira sustentável.</p>
+                    <p>Gerar valor e satisfação a clientes, colaboradores e parceiros, atingindo a excelência de maneira
+                        sustentável.</p>
                     <div class="row">
                         <div class="col-md-6 mb-4">
-                            <div class="icon-box"  data-aos="fade-top">
+                            <div class="icon-box" data-aos="fade-top">
                                 <i class="bi bi-eye"></i>
                                 <h4>Nossa Visão</h4>
-                                <p>Ser referência de agilidade, qualidade e eficiência na intermediação de crédito consignado.</p>
+                                <p>Ser referência de agilidade, qualidade e eficiência na intermediação de crédito
+                                    consignado.</p>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
-                            <div class="icon-box"  data-aos="fade-top">
+                            <div class="icon-box" data-aos="fade-top">
                                 <i class="bi bi-emoji-smile"></i>
                                 <h4>Uma empresa de valores</h4>
                                 <p>Ética, respeito, proatividade, honestidade, qualidade e eficiência.</p>
@@ -245,14 +266,14 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-4">
-                            <div class="icon-box"  data-aos="fade-top">
+                            <div class="icon-box" data-aos="fade-top">
                                 <i class="bi bi-star"></i>
                                 <h4>Atendimento Vip</h4>
                                 <p>Temos uma equipe de consultores financeiros especializados.</p>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4" >
-                            <div class="icon-box"  data-aos="fade-top">
+                        <div class="col-md-6 mb-4">
+                            <div class="icon-box" data-aos="fade-top">
                                 <i class="bi bi-bar-chart"></i>
                                 <h4>As melhores taxas do mercado</h4>
                                 <p>Condições e prazos flexíveis encaixados no seu orçamento.</p>
@@ -266,10 +287,10 @@
     <div class="faq-section">
         <div class="faq-content">
             <div class="div" data-aos="fade-right">
-            <h2>Tem Dúvidas?</h2>
-            <p>Acesse agora nossa área de Perguntas Frequentes</p>
-            <a href="pages/faq.html">Perguntas Frequentes &rarr;</a>
-        </div>
+                <h2>Tem Dúvidas?</h2>
+                <p>Acesse agora nossa área de Perguntas Frequentes</p>
+                <a href="pages/faq.html">Perguntas Frequentes &rarr;</a>
+            </div>
         </div>
         <div class="faq-image" data-aos="fade-top">
         </div>
@@ -278,14 +299,15 @@
     <section class="cta text-white text-center py-5">
         <div class="container">
             <h2 id="ptsf" class="mb-4" data-aos="fade-down">Pronto para transformar suas finanças?</h2>
-            <p class="mb-4"  data-aos="fade-top">Nossa equipe está aqui para ajudar você a alcançar seus objetivos financeiros. Entre em
+            <p class="mb-4" data-aos="fade-top">Nossa equipe está aqui para ajudar você a alcançar seus objetivos
+                financeiros. Entre em
                 contato para uma consulta personalizada.</p>
-                <a href="#">
-            <button  data-aos="fade-top" class="btn btn-light btn-lg mt-3" >Fale Conosco</button>
-        </a>
+            <a href="#">
+                <button data-aos="fade-top" class="btn btn-light btn-lg mt-3">Fale Conosco</button>
+            </a>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer id="Footer" class="bg-dark text-light py-5">
         <div class="container">
@@ -335,7 +357,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- Scripts -->
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/botao.js"></script>
@@ -349,16 +371,16 @@
         );
     </script>
 
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-<script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-</script>
-<div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
     </div>
-</div>
 </body>
 
 </html>
