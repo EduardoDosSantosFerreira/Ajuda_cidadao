@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ajuda Cidadão</title>
-    <link rel="icon" type="image/png" sizes="30x30" href="assets/img/logotipo_sem_fundo/6 (2).png">
+    <link rel="icon" type="image/png" href="assets/img/logotipo_sem_fundo/6 (2).png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- FontAwesome CSS (para os ícones) -->
@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="assets/css/aos.css">
 </head>
 
-<body> <!-- Navbar -->
+<body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container"> <!-- Logo da Empresa --> <a class="navbar-brand" href="#"> <img
                     src="assets/img/logotipo_sem_fundo/1 (2).png" alt="Logo Ajuda Cidadão" width="250" height="auto">
@@ -40,7 +41,9 @@
             <h2 class="display-5" data-aos="fade-down">Bem-vindo a Ajuda Cidadão</h2>
             <p class="lead" data-aos="fade-top">Oferecemos soluções personalizadas para você alcançar seus objetivos
                 financeiros.</p>
-            <button class="btn btn-light btn-lg mt-3" onclick="mostrarFormulario()">Como podemos te Ajudar?</button>
+            <button class="btn btn-light btn-lg mt-3" onclick="mostrarFormulario()">Selecione como podemos ajudar!</button>
+            
+            
         </div>
 
         <!-- Formulário que aparece ao clicar no botão -->
@@ -54,13 +57,13 @@
                 <input type="text" id="cpf" placeholder="CPF" maxlength="11" required oninput="validateCPF(this)">
                 <select id="problema" required>
                     <option value="" disabled selected>Selecione o problema</option>
-                    <option value="Problema com pagamento">Problema com pagamento</option>
-                    <option value="Dificuldade de acesso">Dificuldade de acesso</option>
+                    <option value="Emprestimo Consignado">Emprestimo Consignado</option>
+                    <option value="Emprestimo Pessoal">Emprestimo pessoal</option>
                     <option value="Empréstimo INSS">Empréstimo INSS</option>
-                    <option value="Empréstimo Pessoal">Empréstimo Pessoal</option>
-                    <option value="FGTS">FGTS</option>
+                    <option value="FGTS"> FGTS</option>
+                    <option value="INSS">INSS</option>
                     <option value="Aposentadoria">Aposentadoria</option>
-                    <option value="Advocacia">Advocacia</option>
+                    <option value="Pagamento de conta">Pagamento de conta</option>
                     <option value="Parcerias">Parcerias</option>
                     <option value="Outros">Outros</option>
                 </select>
@@ -75,160 +78,157 @@
             <h2 class="mb-5" data-aos="fade-down">Nossos Serviços</h2>
             <div class="row gy-4" id="servicos-container"> <!-- Serviços principais -->
                 <div class="col-md-4" data-aos="fade-down">
-                    <div class="card service-card shadow-sm h-100"
-                        onclick="contactUs('Empréstimo Consignado', 'Ajudamos você a tomar decisões financeiras inteligentes com base em suas metas pessoais.')">
+                    <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#FEC260;" class="fas fa-hand-holding-usd fa-3x"></i>
                             </div>
                             <h5 class="card-title">Empréstimo Consignado</h5>
-                            <p class="card-text">Ajudamos você a tomar decisões financeiras inteligentes com base em
-                                suas metas pessoais.</p>
+                            <p class="card-text">Menores juros em seus contratos taxas apartir de 1.30%</p>
+                            <button class="btn btn-primary" onclick="contactUs('Empréstimo Consignado')">Fale Conosco</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-down">
-                    <div class="card service-card shadow-sm h-100"
-                        onclick="contactUs('Empréstimo Pessoal', 'Maximize seus retornos com nossas estratégias de investimento sob medida para seu perfil.')">
+                    <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#FEC260;" class="fas fa-wallet fa-3x"></i>
                             </div>
                             <h5 class="card-title">Empréstimo Pessoal</h5>
-                            <p class="card-text">Maximize seus retornos com nossas estratégias de investimento sob
-                                medida para seu perfil.</p>
+                            <p class="card-text">Você sabia que existe o emprestimo descontado da fatura de energia? clique e simule !</p>
+                            <button class="btn btn-primary" onclick="contactUs('Empréstimo Pessoal')">Fale Conosco</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-down">
-                    <div class="card service-card shadow-sm h-100"
-                        onclick="contactUs('Ponto do INSS', 'Aprenda a gerenciar seu dinheiro com nossos cursos e workshops práticos.')">
+                    <div class="card service-card shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="icon mb-3">
+                                <i style="color:#FEC260;" class="fas fa-briefcase fa-3x"></i>
+                            </div>
+                            <h5 class="card-title">Saque FGTS</h5>
+                            <p class="card-text">Tem saldo parado? Que tal colocar em movimento simulação gratuita tempo médio de resposta 1 minuto apenas!</p>
+                            <button class="btn btn-primary" onclick="contactUs('Saque FGTS')">Fale Conosco</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down">
+                    <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#FEC260;" class="fas fa-university fa-3x"></i>
                             </div>
                             <h5 class="card-title">Ponto do INSS</h5>
-                            <p class="card-text">Aprenda a gerenciar seu dinheiro com nossos cursos e workshops
-                                práticos.</p>
+                            <p class="card-text">Saia da fila do INSS, seus requerimentos são proridade para nós!</p>
+                            <button class="btn btn-primary" onclick="contactUs('Ponto do INSS')">Fale Conosco</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-top">
-                    <div class="card service-card shadow-sm h-100"
-                        onclick="contactUs('Pensão por Morte', 'Nossos especialistas guiam você por momentos delicados com soluções financeiras.')">
-                        <div class="card-body">
-                            <div class="icon mb-3">
-                                <i style="color:#FEC260;" class="fas fa-heartbeat fa-3x"></i>
-                            </div>
-                            <h5 class="card-title">Pensão por Morte</h5>
-                            <p class="card-text">Nossos especialistas guiam você por momentos delicados com soluções
-                                financeiras.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-top">
-                    <div class="card service-card shadow-sm h-100"
-                        onclick="contactUs('Aposentadorias', 'Orientamos você sobre como maximizar seus direitos e benefícios.')">
+
+                <div class="col-md-4" data-aos="fade-down">
+                    <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#FEC260;" class="fas fa-user-tie fa-3x"></i>
                             </div>
                             <h5 class="card-title">Aposentadorias</h5>
-                            <p class="card-text">Orientamos você sobre como maximizar seus direitos e benefícios.</p>
+                            <p class="card-text">Aqui você vai ser aposentar com maior salário obtendo um atendimento exclusivo e agil.</p>
+                            <button class="btn btn-primary" onclick="contactUs('Aposentadorias')">Fale Conosco</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-top">
-                    <div class="card service-card shadow-sm h-100"
-                        onclick="contactUs('Refinanciamento de dívidas', 'Oferecemos um plano personalizado para organizar suas finanças.')">
+                <div class="col-md-4" data-aos="fade-down">
+                    <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#FEC260;" class="fas fa-coins fa-3x"></i>
                             </div>
                             <h5 class="card-title">Refinanciamento de dívidas</h5>
                             <p class="card-text">Oferecemos um plano personalizado para organizar suas finanças.</p>
+                            <button class="btn btn-primary" onclick="contactUs('Refinanciamento de dívidas')">Fale Conosco</button>
                         </div>
                     </div>
                 </div>
             </div> <!-- Mais serviços (inicialmente ocultos) -->
             <div class="row gy-4 mt-4" id="servicos-extra" style="display: none;">
                 <div class="col-md-4">
-                    <div class="card service-card shadow-sm h-100"
-                        onclick="contactUs('Empréstimo na Máquina de cartão de crédito', 'Consultoria personalizada para suas finanças pessoais e empresariais.')">
-                        <div class="card-body">
-                            <div class="icon mb-3">
-                                <i style="color:#3FA796;" class="fas fa-chart-line fa-3x"></i>
-                            </div>
-                            <h5 class="card-title">Empréstimo na Máquina de cartão de crédito</h5>
-                            <p class="card-text">Consultoria personalizada para suas finanças pessoais e empresariais.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card service-card shadow-sm h-100"
-                        onclick="contactUs('Auxílio Doença', 'Cursos de educação financeira para todos os níveis.')">
+                    <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#3FA796;" class="fas fa-piggy-bank fa-3x"></i>
                             </div>
                             <h5 class="card-title">Auxílio Doença</h5>
-                            <p class="card-text">Cursos de educação financeira para todos os níveis.</p>
+                            <p class="card-text">Suporte exclusivo para situações de emergencia e enfermidade, afaste-se do trabalho com segurança</p>
+                            <button class="btn btn-primary" onclick="contactUs('Auxílio Doença')">Fale Conosco</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-top">
+                    <div class="card service-card shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="icon mb-3">
+                                <i style="color:#3FA796;" class="fas fa-heartbeat fa-3x"></i>
+                            </div>
+                            <h5 class="card-title">Pensão por Morte</h5>
+                            <p class="card-text">Facilitamos a concessão do seu beneficio, tempo médio 10 dias.</p>
+                            <button class="btn btn-primary" onclick="contactUs('Pensão por Morte')">Fale Conosco</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card service-card shadow-sm h-100"
-                        onclick="contactUs('Auxílio Reclusão', 'Ajuda na compra do seu imóvel com as melhores condições.')">
+                    <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#3FA796;" class="fas fa-home fa-3x"></i>
                             </div>
                             <h5 class="card-title">Auxílio Reclusão</h5>
                             <p class="card-text">Ajuda na compra do seu imóvel com as melhores condições.</p>
+                            <button class="btn btn-primary" onclick="contactUs('Auxílio Reclusão')">Fale Conosco</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card service-card shadow-sm h-100"
-                        onclick="contactUs('Agendamentos', 'Proteja seus bens com os melhores seguros disponíveis no mercado.')">
+                    <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#3FA796;" class="fas fa-book fa-3x"></i>
                             </div>
                             <h5 class="card-title">Agendamentos</h5>
-                            <p class="card-text">Proteja seus bens com os melhores seguros disponíveis no mercado.</p>
+                            <p class="card-text">obtenha agora seu agendamento expresso não pegue fila!</p>
+                            <button class="btn btn-primary" onclick="contactUs('Agendamentos')">Fale Conosco</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card service-card shadow-sm h-100"
-                        onclick="contactUs('Portabilidade', 'Financiamento de veículos novos e usados com taxas atrativas.')">
+                    <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#3FA796;" class="fas fa-car fa-3x"></i>
                             </div>
                             <h5 class="card-title">Portabilidade</h5>
-                            <p class="card-text">Financiamento de veículos novos e usados com taxas atrativas.</p>
+                            <p class="card-text">Diminua a parcela dos seus imprestimos trazendo seu contrato para nosso banco.Taxa apartir de 1.30%</p>
+                            <button class="btn btn-primary" onclick="contactUs('Portabilidade')">Fale Conosco</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card service-card shadow-sm h-100"
-                        onclick="contactUs('Pagamento de Conta', 'Apoio no planejamento da sua carreira profissional.')">
+                    <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
                                 <i style="color:#3FA796;" class="fas fa-briefcase fa-3x"></i>
                             </div>
                             <h5 class="card-title">Pagamento de Conta</h5>
-                            <p class="card-text">Apoio no planejamento da sua carreira profissional.</p>
+                            <p class="card-text">Está com dificuldade em deixar suas cotas em dia clique aqui e fale com o consultor.</p>
+                            <button class="btn btn-primary" onclick="contactUs('Pagamento de Conta')">Fale Conosco</button>
                         </div>
                     </div>
                 </div>
+
             </div>
             <!-- Ícone clicável para exibir mais serviços -->
             <div class="mt-4">
-                <i id="show-more-icon" class="fas fa-chevron-down fa-2x" style="cursor: pointer; color: #007bff;"></i>
+                <i id="show-more-icon" class="fas fa-chevron-down fa-2x" style="cursor: pointer;"></i>
             </div>
         </div>
     </section>
@@ -284,6 +284,50 @@
             </div>
         </div>
     </section>
+      <!-- Hero Section -->
+      <section class="hero-section d-flex align-items-center">
+        <div class="container">
+          <div class="row align-items-center">
+            
+            <!-- Text Section -->
+            <div class="col-md-6">
+              <h1 class="display-4 fw-bold">Escolha entre <br>empréstimo, saque do FGTS ou INSS.</h1>
+              <p class="lead">A Fácil é a maior buscador de Empréstimo Pessoal, Consignado, Consórcio e Refinanciamento!</p>
+              <h3>O que você procura?</h3>
+    
+              <!-- Button Grid with Icons -->
+              <div class="row gy-3">
+                <div class="col-6">
+                  <button class="btn btn-outline-light w-100">
+                    <i class="fas fa-file-invoice-dollar"></i> Emprstimo INSS
+                  </button>
+                </div>
+                <div class="col-6">
+                  <button class="btn btn-outline-light w-100">
+                    <i class="fas fa-bolt"></i> Saque Aniversário
+                  </button>
+                </div>
+                <div class="col-6">
+                  <button class="btn btn-outline-light w-100">
+                    <i class="fas fa-lightbulb"></i> Crédito Conta de Luz
+                  </button>
+                </div>
+                <div class="col-6">
+                  <button class="btn btn-outline-light w-100">
+                    <i class="fas fa-hand-holding-usd"></i> Ponto INSS Digital
+                  </button>
+                </div>
+              </div>
+            </div>
+
+        <!-- Image Section -->
+        <div class="col-md-6">
+          <img src="assets/img/pexels-photo-3768131.jpg" class="img-fluid rounded" alt="Guitar Shop">
+        </div>
+
+      </div>
+    </div>
+  </section>
     <div class="faq-section">
         <div class="faq-content">
             <div class="div" data-aos="fade-right">
@@ -295,6 +339,7 @@
         <div class="faq-image" data-aos="fade-top">
         </div>
     </div>
+
     <!-- Call to Action -->
     <section class="cta text-white text-center py-5">
         <div class="container">
@@ -310,7 +355,7 @@
 
     <!-- Footer -->
     <footer id="Footer" class="bg-dark text-light py-5">
-        <div class="container">
+        <div id="sobre" class="container">
             <div class="row"> <!-- Seção: Sobre Nós -->
                 <div class="col-md-4">
                     <h5>Sobre Nós</h5>
@@ -357,12 +402,31 @@
             </div>
         </div>
     </footer>
+    <div id="popupChat" class="chat-popup d-none">
+        <div class="chat-header">
+          <img src="assets/img/images/leo.png" alt="Leonardo" class="chat-img">
+          <div class="chat-info">
+            <h5>Leonardo</h5>
+            <p>Consultor da Ajuda Cidadão</p>
+          </div>
+        </div>
+        <div class="chat-body">
+          <div class="message received">
+            <p>Olá, sou o Consultor Leonardo. Notei que você esta navegando neste site a um tempo. Eu acabei de finalizar um atendimento e estou disponível. Posso te ajudar?</p>
+          </div>
+        </div>
+        <div class="chat-footer">
+          <input type="text" id="userMessage" placeholder="Escreva sua mensagem..." class="form-control">
+          <button id="sendMessage" class="btn btn-success">Enviar</button>
+        </div>
+      </div>
 
     <!-- Scripts -->
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/botao.js"></script>
     <script src="assets/js/form.js"></script>
     <script src="assets/js/aos.js"></script>
+    <script src="assets/js/poppup.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script>
         AOS.init({
