@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ajuda Cidadão</title>
-    <link rel="icon" type="image/png" href="assets/img/logotipo_sem_fundo/6 (2).png">
+    <link rel="icon" type="image/png" href="assets/img/logotipo_sem_fundo/6 (2).png" alt="Logotipo Ajuda Cidadão">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- FontAwesome CSS (para os ícones) -->
@@ -22,7 +22,7 @@
         <div class="container">
             <!-- Logo da Empresa -->
             <a class="navbar-brand" href="#">
-                <img src="assets/img/logotipo_sem_fundo/1 (2).png" alt="Logo Ajuda Cidadão" width="250" height="auto">
+                <img src="assets/img/logotipo_sem_fundo/1 (2).png" alt="Logotipo Ajuda Cidadão" width="250" height="auto">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,20 +85,20 @@
             
             <!-- Ícone do WhatsApp -->
             <div class="whatsapp-icon" style="position: fixed; bottom: 20px; left: 20px; cursor: pointer;" onclick="window.open('https://wa.me/5513996679977?text=Olá%20Leonardo,%20venho%20pelo%20site%20do%20Ajuda%20cidadão.', '_blank')">
-                <i class="fab fa-whatsapp fa-3x" style="color: #25D366;"></i>
+                <i class="fab fa-whatsapp fa-3x" style="color: #25D366;" aria-label="Ícone do WhatsApp"></i>
             </div>
         </div>
 
         <!-- Formulário que aparece ao clicar no botão -->
         <div class="form-popup" id="formHelp">
             <h2 style="color: #FEC260;">Preencha Algumas Informações</h2>
-            <img src="assets/img/logotipo_sem_fundo/6 (2).png" style="width: 50px;" alt="Logo da empresa">
+            <img src="assets/img/logotipo_sem_fundo/6 (2).png" style="width: 50px;" alt="Logotipo da empresa">
             <br>
             <br>
             <form id="helpForm">
-                <input type="text" id="nome" placeholder="Nome completo" required oninput="formatName(this)">
-                <input type="text" id="cpf" placeholder="CPF" maxlength="11" required oninput="validateCPF(this)">
-                <select id="problema" required>
+                <input type="text" id="nome" placeholder="Nome completo" required oninput="formatName(this)" aria-label="Nome completo">
+                <input type="text" id="cpf" placeholder="CPF" maxlength="11" required oninput="validateCPF(this)" aria-label="CPF">
+                <select id="problema" required aria-label="Selecione o problema">
                     <option value="" disabled selected>Selecione o problema</option>
                     <option value="Emprestimo Consignado">Emprestimo Consignado</option>
                     <option value="Emprestimo Pessoal">Emprestimo pessoal</option>
@@ -125,7 +125,7 @@
                     <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
-                                <i style="color:#FEC260;" class="fas fa-hand-holding-usd fa-3x"></i>
+                                <i style="color:#FEC260;" class="fas fa-hand-holding-usd fa-3x" aria-label="Ícone de Empréstimo Consignado"></i>
                             </div>
                             <h5 class="card-title">Empréstimo Consignado</h5>
                             <p class="card-text">Menores juros em seus contratos taxas apartir de 1.30%</p>
@@ -137,7 +137,7 @@
                     <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
-                                <i style="color:#FEC260;" class="fas fa-wallet fa-3x"></i>
+                                <i style="color:#FEC260;" class="fas fa-wallet fa-3x" aria-label="Ícone de Empréstimo Pessoal"></i>
                             </div>
                             <h5 class="card-title">Empréstimo Pessoal</h5>
                             <p class="card-text">Você sabia que existe o emprestimo descontado da fatura de energia? clique e simule !</p>
@@ -149,7 +149,7 @@
                     <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
-                                <i style="color:#FEC260;" class="fas fa-briefcase fa-3x"></i>
+                                <i style="color:#FEC260;" class="fas fa-briefcase fa-3x" aria-label="Ícone de Saque FGTS"></i>
                             </div>
                             <h5 class="card-title">Saque FGTS</h5>
                             <p class="card-text">Tem saldo parado? Que tal colocar em movimento simulação gratuita tempo médio de resposta 1 minuto apenas!</p>
@@ -161,7 +161,7 @@
                     <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
-                                <i style="color:#FEC260;" class="fas fa-university fa-3x"></i>
+                                <i style="color:#FEC260;" class="fas fa-university fa-3x" aria-label="Ícone de Ponto do INSS"></i>
                             </div>
                             <h5 class="card-title">Ponto do INSS</h5>
                             <p class="card-text">Saia da fila do INSS, seus requerimentos são proridade para nós!</p>
@@ -173,7 +173,7 @@
                     <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
-                                <i style="color:#FEC260;" class="fas fa-user-tie fa-3x"></i>
+                                <i style="color:#FEC260;" class="fas fa-user-tie fa-3x" aria-label="Ícone de Aposentadorias"></i>
                             </div>
                             <h5 class="card-title">Aposentadorias</h5>
                             <p class="card-text">Aqui você vai ser aposentar com maior salário obtendo um atendimento exclusivo e agil.</p>
@@ -185,7 +185,7 @@
                     <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
-                                <i style="color:#FEC260;" class="fas fa-coins fa-3x"></i>
+                                <i style="color:#FEC260;" class="fas fa-coins fa-3x" aria-label="Ícone de Refinanciamento de dívidas"></i>
                             </div>
                             <h5 class="card-title">Refinanciamento de dívidas</h5>
                             <p class="card-text">Oferecemos um plano personalizado para organizar suas finanças.</p>
@@ -200,7 +200,7 @@
                     <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
-                                <i style="color:#3FA796;" class="fas fa-piggy-bank fa-3x"></i>
+                                <i style="color:#3FA796;" class="fas fa-piggy-bank fa-3x" aria-label="Ícone de Auxílio Doença"></i>
                             </div>
                             <h5 class="card-title">Auxílio Doença</h5>
                             <p class="card-text">Suporte exclusivo para situações de emergencia e enfermidade, afaste-se do trabalho com segurança</p>
@@ -212,7 +212,7 @@
                     <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
-                                <i style="color:#3FA796;" class="fas fa-heartbeat fa-3x"></i>
+                                <i style="color:#3FA796;" class="fas fa-heartbeat fa-3x" aria-label="Ícone de Pensão por Morte"></i>
                             </div>
                             <h5 class="card-title">Pensão por Morte</h5>
                             <p class="card-text">Facilitamos a concessão do seu beneficio, tempo médio 10 dias.</p>
@@ -224,7 +224,7 @@
                     <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
-                                <i style="color:#3FA796;" class="fas fa-home fa-3x"></i>
+                                <i style="color:#3FA796;" class="fas fa-home fa-3x" aria-label="Ícone de Auxílio Reclusão"></i>
                             </div>
                             <h5 class="card-title">Auxílio Reclusão</h5>
                             <p class="card-text">Ajuda na compra do seu imóvel com as melhores condições.</p>
@@ -236,7 +236,7 @@
                     <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
-                                <i style="color:#3FA796;" class="fas fa-book fa-3x"></i>
+                                <i style="color:#3FA796;" class="fas fa-book fa-3x" aria-label="Ícone de Agendamentos"></i>
                             </div>
                             <h5 class="card-title">Agendamentos</h5>
                             <p class="card-text">obtenha agora seu agendamento expresso não pegue fila!</p>
@@ -248,7 +248,7 @@
                     <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
-                                <i style="color:#3FA796;" class="fas fa-car fa-3x"></i>
+                                <i style="color:#3FA796;" class="fas fa-car fa-3x" aria-label="Ícone de Portabilidade"></i>
                             </div>
                             <h5 class="card-title">Portabilidade</h5>
                             <p class="card-text">Diminua a parcela dos seus imprestimos trazendo seu contrato para nosso banco.Taxa apartir de 1.30%</p>
@@ -260,7 +260,7 @@
                     <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
                             <div class="icon mb-3">
-                                <i style="color:#3FA796;" class="fas fa-briefcase fa-3x"></i>
+                                <i style="color:#3FA796;" class="fas fa-briefcase fa-3x" aria-label="Ícone de Pagamento de Conta"></i>
                             </div>
                             <h5 class="card-title">Pagamento de Conta</h5>
                             <p class="card-text">Está com dificuldade em deixar suas cotas em dia clique aqui e fale com o consultor.</p>
@@ -271,7 +271,7 @@
             </div>
             <!-- Ícone clicável para exibir mais serviços -->
             <div class="mt-4">
-                <i id="show-more-icon" class="fas fa-chevron-down fa-2x" style="cursor: pointer;"></i>
+                <i id="show-more-icon" class="fas fa-chevron-down fa-2x" style="cursor: pointer;" aria-label="Mostrar mais serviços"></i>
             </div>
         </div>
     </section>
@@ -282,7 +282,7 @@
                 <!-- Coluna da Imagem -->
                 <div class="col-md-6">
                     <img src="assets/img/images/pexels-photo-7979597.jpg" class="img-fluid rounded"
-                        alt="Placeholder Image" data-aos="fade-right">
+                        alt="Imagem de uma pessoa utilizando um laptop" data-aos="fade-right">
                 </div>
                 <!-- Coluna de Informação -->
                 <div class="col-md-6">
@@ -293,7 +293,7 @@
                     <div class="row">
                         <div class="col-md-6 mb-4">
                             <div class="icon-box" data-aos="fade-top">
-                                <i class="bi bi-eye"></i>
+                                <i class="bi bi-eye" aria-label="Ícone de Visão"></i>
                                 <h4>Nossa Visão</h4>
                                 <p>Ser referência de agilidade, qualidade e eficiência na intermediação de crédito
                                     consignado.</p>
@@ -301,7 +301,7 @@
                         </div>
                         <div class="col-md-6 mb-4">
                             <div class="icon-box" data-aos="fade-top">
-                                <i class="bi bi-emoji-smile"></i>
+                                <i class="bi bi-emoji-smile" aria-label="Ícone de Valores"></i>
                                 <h4>Uma empresa de valores</h4>
                                 <p>Ética, respeito, proatividade, honestidade, qualidade e eficiência.</p>
                             </div>
@@ -310,14 +310,14 @@
                     <div class="row">
                         <div class="col-md-6 mb-4">
                             <div class="icon-box" data-aos="fade-top">
-                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star" aria-label="Ícone de Atendimento Vip"></i>
                                 <h4>Atendimento Vip</h4>
                                 <p>Temos uma equipe de consultores financeiros especializados.</p>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
                             <div class="icon-box" data-aos="fade-top">
-                                <i class="bi bi-bar-chart"></i>
+                                <i class="bi bi-bar-chart" aria-label="Ícone de Melhores Taxas"></i>
                                 <h4>As melhores taxas do mercado</h4>
                                 <p>Condições e prazos flexíveis encaixados no seu orçamento.</p>
                             </div>
@@ -334,35 +334,35 @@
                 <!-- Text Section -->
                 <div class="col-md-6">
                     <h1 class="display-4 fw-bold">Escolha entre <br>empréstimo, saque do FGTS ou INSS.</h1>
-                    <p class="lead">A Fácil é a maior buscador de Empréstimo Pessoal, Consignado, Consórcio e Refinanciamento!</p>
+                    <p class="lead">Ajuda Cidadão é a maior buscador de Empréstimo Pessoal, Consignado, Consórcio e Refinanciamento!</p>
                     <h3>O que você procura?</h3>
                     <!-- Button Grid with Icons -->
                     <div class="row gy-3">
                         <div class="col-6">
                             <a href="https://wa.me/5513996679977?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Empréstimo%20INSS" class="btn btn-outline-light w-100">
-                                <i class="fas fa-file-invoice-dollar"></i> Empréstimo INSS
+                                <i class="fas fa-file-invoice-dollar" aria-label="Ícone de Empréstimo INSS"></i> Empréstimo INSS
                             </a>
                         </div>
                         <div class="col-6">
                             <a href="https://wa.me/5513996679977?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Saque%20Aniversário" class="btn btn-outline-light w-100">
-                                <i class="fas fa-bolt"></i> Saque Aniversário
+                                <i class="fas fa-bolt" aria-label="Ícone de Saque Aniversário"></i> Saque Aniversário
                             </a>
                         </div>
                         <div class="col-6">
                             <a href="https://wa.me/5513996679977?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Crédito%20Conta%20de%20Luz" class="btn btn-outline-light w-100">
-                                <i class="fas fa-lightbulb"></i> Crédito Conta de Luz
+                                <i class="fas fa-lightbulb" aria-label="Ícone de Crédito Conta de Luz"></i> Crédito Conta de Luz
                             </a>
                         </div>
                         <div class="col-6">
                             <a href="https://wa.me/5513996679977?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Ponto%20INSS%20Digital" class="btn btn-outline-light w-100">
-                                <i class="fas fa-hand-holding-usd"></i> Ponto INSS Digital
+                                <i class="fas fa-hand-holding-usd" aria-label="Ícone de Ponto INSS Digital"></i> Ponto INSS Digital
                             </a>
                         </div>
                     </div>
                 </div>
                 <!-- Image Section -->
                 <div class="col-md-6">
-                    <img src="assets/img/images/pexels-photo-3768131.jpg" class="img-fluid rounded" alt="Guitar Shop">
+                    <img src="assets/img/images/pexels-photo-3768131.jpg" class="img-fluid rounded" alt="Imagem de uma pessoa segurando uma guitarra">
                 </div>
             </div>
         </div>
@@ -417,9 +417,9 @@
                 <div class="col-md-4">
                     <h5>Contato</h5>
                     <ul class="list-unstyled">
-                        <li><i class="fas fa-envelope"></i>ajudacidadaosf@gmail.com</li>
-                        <li><i class="fas fa-phone"></i> +55 (13) 99667-9977 </li>
-                        <li><i class="fas fa-map-marker-alt"></i> R. Ver. João de Almeida Batista, 80, Itanhaém, SP</li>
+                        <li><i class="fas fa-envelope" aria-label="Ícone de Email"></i>ajudacidadaosf@gmail.com</li>
+                        <li><i class="fas fa-phone" aria-label="Ícone de Telefone"></i> +55 (13) 99667-9977 </li>
+                        <li><i class="fas fa-map-marker-alt" aria-label="Ícone de Localização"></i> R. Ver. João de Almeida Batista, 80, Itanhaém, SP</li>
                     </ul>
                 </div>
             </div>
@@ -431,13 +431,13 @@
                     <p class="mb-0">&copy; 2024 Ajuda Cidadão. Todos os direitos reservados.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <a href="https://www.facebook.com/ajudacidadao.oficial/" class="text-light me-3">
+                    <a href="https://www.facebook.com/ajudacidadao.oficial/" class="text-light me-3" aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://www.instagram.com/ajudacidadao.oficial/" class="text-light me-3">
+                    <a href="https://www.instagram.com/ajudacidadao.oficial/" class="text-light me-3" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/ajuda-cidadao-994b98266/" class="text-light">
+                    <a href="https://www.linkedin.com/in/ajuda-cidadao-994b98266/" class="text-light" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
@@ -447,7 +447,7 @@
 
     <div id="popupChat" class="chat-popup d-none">
         <div class="chat-header">
-            <img src="assets/img/images/leo.png" alt="Leonardo" class="chat-img">
+            <img src="assets/img/images/leo.png" alt="Imagem de Leonardo" class="chat-img">
             <div class="chat-info">
                 <h5>Leonardo</h5>
                 <p>Online</p>
@@ -458,7 +458,7 @@
         </div>
         <div class="chat-body">
             <div class="message received">
-                <p>Olá, meu nome é Leonardo, sou consultor da Ajuda Cidadão, como posso ajudar?</p>
+                <p>Oi, notei que você esta navegando a um tempo neste site. Queria te falar uma coisa</p>
             </div>
             <div id="audioMessage" class="message received d-none">
                 <audio controls>
