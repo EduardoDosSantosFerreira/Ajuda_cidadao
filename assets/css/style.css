@@ -76,7 +76,6 @@ header nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .hero h2 {
@@ -93,7 +92,7 @@ header nav ul li a:hover {
     z-index: 1;
 }
 
-.hero button {
+.hero-button  {
     padding: 12px 25px;
     background: linear-gradient(45deg, #3FA796, #0056b2, #67D5B5);
     background-size: 200% 200%;
@@ -134,7 +133,7 @@ header nav ul li a:hover {
     }
 }
 
-.hero button:hover {
+.hero-button:hover {
     background-color: transparent; /* Remove a cor sólida no hover */
     transform: scale(1.15); /* Expande um pouco mais no hover */
 }
@@ -286,7 +285,7 @@ footer hr {
         font-size: 16px;
     }
 
-    .hero button {
+    .hero-button {
         padding: 10px 20px;
     }
 }
@@ -552,6 +551,7 @@ h1 {
     background-color: #25D366;
     border-radius: 10px 10px 0 0;
     color: white;
+    position: relative; /* Adicionado para posicionamento absoluto do botão minimizar */
 }
 
 .minimize-btn {
@@ -560,6 +560,9 @@ h1 {
     color: white;
     font-size: 18px;
     cursor: pointer;
+    position: absolute; /* Adicionado para posicionamento no canto superior direito */
+    top: 10px; /* Ajuste conforme necessário */
+    right: 10px; /* Ajuste conforme necessário */
 }
 
 .chat-img {
@@ -578,8 +581,8 @@ h1 {
     padding: 10px;
     max-height: 200px;
     overflow-y: auto;
-    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 0 0 10px 10px;
+    background-image: url('assets/img/images/6240b66d5c50c8661eee78b439a7d33c.jpg');
 }
 
 .message {
@@ -635,6 +638,7 @@ h1 {
 
 .minimized .chat-header {
     justify-content: center;
+    padding-right: 50px;
 }
 .dark-mode {
     background-color: #121212;
@@ -671,14 +675,11 @@ h1 {
     background: #2A0944;
     color: #ffffff;
 }
-.dark-mode .hero::after {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-.dark-mode .hero button {
+.dark-mode .hero-button {
     background: linear-gradient(45deg, #3FA796, #0056b2, #67D5B5);
     color: #ffffff;
 }
-.dark-mode .hero button:hover {
+.dark-mode .hero-button:hover {
     background-color: transparent;
     color: #ffffff;
 }

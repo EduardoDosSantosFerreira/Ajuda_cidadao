@@ -42,6 +42,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="pages/faq.html">Perguntas Frequentes</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/landing-page.html">Perguntas Frequentes</a>
+                    </li>
                 </ul>
                 <div class="d-flex align-items-center ms-3">
                     <button class="btn btn-outline-secondary me-2" onclick="diminuirTexto()">
@@ -75,24 +78,102 @@
             </div>
         </div>
     </nav>
+    <div class="cont" style="background-color: #2A0944;">
     <!-- Hero Section -->
     <section class="hero text-white text-center">
         <div class="container text-center mt-5">
             <h2 class="display-5" data-aos="fade-down">Bem-vindo a Ajuda Cidadão</h2>
-            <p class="lead" data-aos="fade-top">Oferecemos soluções personalizadas para você alcançar seus objetivos
-                financeiros.</p>
-            <button class="btn btn-light btn-lg mt-3" onclick="mostrarFormulario()">Selecione como podemos ajudar!</button>
-            
-            <!-- Ícone do WhatsApp -->
-            <div class="whatsapp-icon" style="position: fixed; bottom: 20px; left: 20px; cursor: pointer;" onclick="window.open('https://wa.me/5513996679977?text=Olá%20Leonardo,%20venho%20pelo%20site%20do%20Ajuda%20cidadão.', '_blank')">
-                <i class="fab fa-whatsapp fa-3x" style="color: #25D366;" aria-label="Ícone do WhatsApp"></i>
+            <p class="lead" data-aos="fade-top">Atendimento online ou presencial, você que escolhe! Todos nossos consultores são certificados pela FEBRABAN, LGPD e PLDFT.</p>
+            <button class="hero-button" onclick="mostrarFormulario()">Selecione como podemos ajudar!</button>
+        </div>
+    </section>
+        <div class="container mt-5" style="background-color: #2A0944;">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card text-center shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="icon mb-3">
+                                <i class="fas fa-car fa-3x" style="color:#FEC260;" aria-label="Ícone de Financiamento de Veículos"></i>
+                            </div>
+                            <h5 class="card-title" style="color: #4CAF50;">Financiamento de Veículos</h5>
+                            <p class="card-text">Aqui você encontra as melhores condições para financiar seu veículo.</p>
+                            <button class="btn-custom">Saiba Mais</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="card text-center shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="icon mb-3">
+                                <i class="fas fa-piggy-bank fa-3x" style="color:#FEC260;" aria-label="Ícone de Empréstimo com Garantia do FGTS"></i>
+                            </div>
+                            <h5 class="card-title" style="color: #4CAF50;">Empréstimo com Garantia do FGTS</h5>
+                            <p class="card-text">Aproveite as taxas reduzidas com a garantia do seu FGTS.</p>
+                            <button class="btn-custom">Saiba Mais</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="icon mb-3">
+                                <i class="fas fa-hand-holding-usd fa-3x" style="color:#FEC260;" aria-label="Ícone de Empréstimo Consignado INSS"></i>
+                            </div>
+                            <h5 class="card-title" style="color: #4CAF50;">Empréstimo Consignado INSS</h5>
+                            <p class="card-text">As melhores condições para aposentados e pensionistas do INSS.</p>
+                            <button class="btn-custom">Saiba Mais</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="icon mb-3">
+                                <i class="fas fa-university fa-3x" style="color:#FEC260;" aria-label="Ícone de Empréstimo para Servidores Públicos"></i>
+                            </div>
+                            <h5 class="card-title" style="color: #4CAF50;">Empréstimo para Servidores Públicos</h5>
+                            <p class="card-text">Condições especiais para servidores públicos.</p>
+                            <button class="btn-custom">Saiba Mais</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+        <style>
+            .card {
+                border: none;
+                transition: transform 0.3s ease;
+            }
+            .card:hover {
+                transform: translateY(-10px);
+            }
+            .card .icon {
+                color: #FEC260;
+            }
+            .card-title {
+                color: #4CAF50;
+            }
+            .btn-custom {
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .btn-custom:hover {
+                background-color: #45a049;
+            }
+        </style>
 
         <!-- Formulário que aparece ao clicar no botão -->
         <div class="form-popup" id="formHelp">
             <h2 style="color: #FEC260;">Preencha Algumas Informações</h2>
-            <img src="assets/img/logotipo_sem_fundo/6 (2).png" style="width: 50px;" alt="Logotipo da empresa">
+            <div style="text-align: center;">
+                <img src="assets/img/logotipo_sem_fundo/6 (2).png" style="width: 50px;" alt="Logotipo da empresa">
+            </div>
             <br>
             <br>
             <form id="helpForm">
@@ -508,8 +589,12 @@
         <div vw-plugin-wrapper>
             <div class="vw-plugin-top-wrapper"></div>
         </div>
-    </div>
-
-</body>
-
-</html>
+        </div>
+        <!-- Ícone do WhatsApp -->
+        <div class="whatsapp-icon" style="position: fixed; bottom: 20px; left: 20px; cursor: pointer;"
+            onclick="window.open('https://wa.me/5513996679977?text=Olá%20Leonardo,%20venho%20pelo%20site%20do%20Ajuda%20cidadão.', '_blank')">
+            <i class="fab fa-whatsapp fa-3x" style="color: #25D366;" aria-label="Ícone do WhatsApp"></i>
+        </div>
+        </body>
+        
+        </html>
