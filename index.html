@@ -110,7 +110,16 @@
                     <option value="Parcerias">Parcerias</option>
                     <option value="Outros">Outros</option>
                 </select>
-                <button type="button" onclick="enviarWhatsApp()">Enviar pelo WhatsApp</button>
+                <button type="button" onclick="enviarWhatsApp()" style="background: linear-gradient(45deg, #a8e063, #56ab2f, #a8e063); background-size: 200% 200%; animation: gradientAnimation 3s ease infinite; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+                    <i class="fab fa-whatsapp" style="margin-right: 5px;"></i> Enviar pelo WhatsApp
+                </button>
+                <style>
+                    @keyframes gradientAnimation {
+                        0% { background-position: 0% 50%; }
+                        50% { background-position: 100% 50%; }
+                        100% { background-position: 0% 50%; }
+                    }
+                </style>
                 <button type="button" class="close-btn" onclick="fecharFormulario()">Fechar</button>
             </form>
         </div>
@@ -373,6 +382,8 @@
                 <h2>Tem Dúvidas?</h2>
                 <p>Acesse agora nossa área de Perguntas Frequentes</p>
                 <a href="pages/faq.html">Perguntas Frequentes &rarr;</a>
+                <br>
+                <br>
             </div>
         </div>
         <div class="faq-image" data-aos="fade-top">
