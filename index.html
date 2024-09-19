@@ -19,19 +19,59 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
-        <div class="container"> <!-- Logo da Empresa --> <a class="navbar-brand" href="#"> <img
-                    src="assets/img/logotipo_sem_fundo/1 (2).png" alt="Logo Ajuda Cidadão" width="250" height="auto">
-            </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span
-                    class="navbar-toggler-icon"></span> </button>
+        <div class="container">
+            <!-- Logo da Empresa -->
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logotipo_sem_fundo/1 (2).png" alt="Logo Ajuda Cidadão" width="250" height="auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"> <a class="nav-link" href="index.html">Início</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#servicos">Serviços</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#Footer">Contato</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/faq.html">Perguntas Frequentes</a> </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Footer">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/faq.html">Perguntas Frequentes</a>
+                    </li>
                 </ul>
+                <div class="d-flex align-items-center ms-3">
+                    <button class="btn btn-outline-secondary me-2" onclick="diminuirTexto()">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button class="btn btn-outline-secondary me-2" onclick="aumentarTexto()">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button class="btn btn-outline-secondary" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                <script>
+                    let fontSize = 1;
+                    function aumentarTexto() {
+                        if (fontSize < 3) {
+                            fontSize += 0.1;
+                            document.body.style.fontSize = fontSize + 'em';
+                        }
+                    }
+                    function diminuirTexto() {
+                        if (fontSize > 0.7) {
+                            fontSize -= 0.1;
+                            document.body.style.fontSize = fontSize + 'em';
+                        }
+                    }
+                    function toggleDarkMode() {
+                        document.body.classList.toggle('dark-mode');
+                    }
+                </script>
             </div>
         </div>
     </nav>
@@ -43,7 +83,10 @@
                 financeiros.</p>
             <button class="btn btn-light btn-lg mt-3" onclick="mostrarFormulario()">Selecione como podemos ajudar!</button>
             
-            
+            <!-- Ícone do WhatsApp -->
+            <div class="whatsapp-icon" style="position: fixed; bottom: 20px; left: 20px; cursor: pointer;" onclick="window.open('https://wa.me/5513996679977?text=Olá%20Leonardo,%20venho%20pelo%20site%20do%20Ajuda%20cidadão.', '_blank')">
+                <i class="fab fa-whatsapp fa-3x" style="color: #25D366;"></i>
+            </div>
         </div>
 
         <!-- Formulário que aparece ao clicar no botão -->
@@ -71,12 +114,13 @@
                 <button type="button" class="close-btn" onclick="fecharFormulario()">Fechar</button>
             </form>
         </div>
-
-    </section> <!-- Serviços -->
+    </section>
+    <!-- Serviços -->
     <section id="servicos" class="py-5">
         <div class="container text-center">
             <h2 class="mb-5" data-aos="fade-down">Nossos Serviços</h2>
-            <div class="row gy-4" id="servicos-container"> <!-- Serviços principais -->
+            <div class="row gy-4" id="servicos-container">
+                <!-- Serviços principais -->
                 <div class="col-md-4" data-aos="fade-down">
                     <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
@@ -125,7 +169,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-4" data-aos="fade-down">
                     <div class="card service-card shadow-sm h-100">
                         <div class="card-body">
@@ -150,7 +193,8 @@
                         </div>
                     </div>
                 </div>
-            </div> <!-- Mais serviços (inicialmente ocultos) -->
+            </div>
+            <!-- Mais serviços (inicialmente ocultos) -->
             <div class="row gy-4 mt-4" id="servicos-extra" style="display: none;">
                 <div class="col-md-4">
                     <div class="card service-card shadow-sm h-100">
@@ -224,7 +268,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <!-- Ícone clicável para exibir mais serviços -->
             <div class="mt-4">
@@ -233,7 +276,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section id="sobre" class="section">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Coluna da Imagem -->
@@ -284,50 +327,46 @@
             </div>
         </div>
     </section>
-      <!-- Hero Section -->
-      <section class="hero-section d-flex align-items-center">
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center">
         <div class="container">
-          <div class="row align-items-center">
-            
-            <!-- Text Section -->
-            <div class="col-md-6">
-              <h1 class="display-4 fw-bold">Escolha entre <br>empréstimo, saque do FGTS ou INSS.</h1>
-              <p class="lead">A Fácil é a maior buscador de Empréstimo Pessoal, Consignado, Consórcio e Refinanciamento!</p>
-              <h3>O que você procura?</h3>
-    
-              <!-- Button Grid with Icons -->
-              <div class="row gy-3">
-                <div class="col-6">
-                  <button class="btn btn-outline-light w-100">
-                    <i class="fas fa-file-invoice-dollar"></i> Emprstimo INSS
-                  </button>
+            <div class="row align-items-center">
+                <!-- Text Section -->
+                <div class="col-md-6">
+                    <h1 class="display-4 fw-bold">Escolha entre <br>empréstimo, saque do FGTS ou INSS.</h1>
+                    <p class="lead">A Fácil é a maior buscador de Empréstimo Pessoal, Consignado, Consórcio e Refinanciamento!</p>
+                    <h3>O que você procura?</h3>
+                    <!-- Button Grid with Icons -->
+                    <div class="row gy-3">
+                        <div class="col-6">
+                            <a href="https://wa.me/5513996679977?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Empréstimo%20INSS" class="btn btn-outline-light w-100">
+                                <i class="fas fa-file-invoice-dollar"></i> Empréstimo INSS
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="https://wa.me/5513996679977?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Saque%20Aniversário" class="btn btn-outline-light w-100">
+                                <i class="fas fa-bolt"></i> Saque Aniversário
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="https://wa.me/5513996679977?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Crédito%20Conta%20de%20Luz" class="btn btn-outline-light w-100">
+                                <i class="fas fa-lightbulb"></i> Crédito Conta de Luz
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="https://wa.me/5513996679977?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Ponto%20INSS%20Digital" class="btn btn-outline-light w-100">
+                                <i class="fas fa-hand-holding-usd"></i> Ponto INSS Digital
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6">
-                  <button class="btn btn-outline-light w-100">
-                    <i class="fas fa-bolt"></i> Saque Aniversário
-                  </button>
+                <!-- Image Section -->
+                <div class="col-md-6">
+                    <img src="assets/img/images/pexels-photo-3768131.jpg" class="img-fluid rounded" alt="Guitar Shop">
                 </div>
-                <div class="col-6">
-                  <button class="btn btn-outline-light w-100">
-                    <i class="fas fa-lightbulb"></i> Crédito Conta de Luz
-                  </button>
-                </div>
-                <div class="col-6">
-                  <button class="btn btn-outline-light w-100">
-                    <i class="fas fa-hand-holding-usd"></i> Ponto INSS Digital
-                  </button>
-                </div>
-              </div>
             </div>
-
-        <!-- Image Section -->
-        <div class="col-md-6">
-          <img src="assets/img/pexels-photo-3768131.jpg" class="img-fluid rounded" alt="Guitar Shop">
         </div>
-
-      </div>
-    </div>
-  </section>
+    </section>
     <div class="faq-section">
         <div class="faq-content">
             <div class="div" data-aos="fade-right">
@@ -347,7 +386,7 @@
             <p class="mb-4" data-aos="fade-top">Nossa equipe está aqui para ajudar você a alcançar seus objetivos
                 financeiros. Entre em
                 contato para uma consulta personalizada.</p>
-            <a href="#">
+            <a href="https://wa.me/5513996679977?text=Olá%20venho%20pelo%20site%20do%20Ajuda%20cidadão">
                 <button data-aos="fade-top" class="btn btn-light btn-lg mt-3">Fale Conosco</button>
             </a>
         </div>
@@ -355,24 +394,26 @@
 
     <!-- Footer -->
     <footer id="Footer" class="bg-dark text-light py-5">
-        <div id="sobre" class="container">
-            <div class="row"> <!-- Seção: Sobre Nós -->
+        <div class="container">
+            <div class="row">
+                <!-- Seção: Sobre Nós -->
                 <div class="col-md-4">
                     <h5>Sobre Nós</h5>
                     <p class="small">A Finanças Inteligentes é uma empresa dedicada a ajudar seus clientes a tomar
                         decisões financeiras inteligentes e personalizadas. Oferecemos uma ampla gama de serviços para
                         atender às suas necessidades.</p>
-                </div> <!-- Seção: Links Rápidos -->
+                </div>
+                <!-- Seção: Links Rápidos -->
                 <div class="col-md-4">
                     <h5>Links Rápidos</h5>
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-light">Início</a></li>
                         <li><a href="#servicos" class="text-light">Serviços</a></li>
-                        <li><a href="#contato" class="text-light">Contato</a></li>
                         <li><a href="#sobre" class="text-light">Sobre Nós</a></li>
                         <li><a href="pages/politica.html" class="text-light">Política de Privacidade</a></li>
                     </ul>
-                </div> <!-- Seção: Contato -->
+                </div>
+                <!-- Seção: Contato -->
                 <div class="col-md-4">
                     <h5>Contato</h5>
                     <ul class="list-unstyled">
@@ -381,7 +422,8 @@
                         <li><i class="fas fa-map-marker-alt"></i> R. Ver. João de Almeida Batista, 80, Itanhaém, SP</li>
                     </ul>
                 </div>
-            </div> <!-- Linha separadora -->
+            </div>
+            <!-- Linha separadora -->
             <hr class="my-4">
             <div class="row">
                 <!-- Redes Sociais -->
@@ -402,24 +444,36 @@
             </div>
         </div>
     </footer>
+
     <div id="popupChat" class="chat-popup d-none">
         <div class="chat-header">
-          <img src="assets/img/images/leo.png" alt="Leonardo" class="chat-img">
-          <div class="chat-info">
-            <h5>Leonardo</h5>
-            <p>Consultor da Ajuda Cidadão</p>
-          </div>
+            <img src="assets/img/images/leo.png" alt="Leonardo" class="chat-img">
+            <div class="chat-info">
+                <h5>Leonardo</h5>
+                <p>Online</p>
+            </div>
+            <button id="minimizeChat" class="btn btn-light minimize-btn">
+                <i class="fas fa-minus"></i>
+            </button>
         </div>
         <div class="chat-body">
-          <div class="message received">
-            <p>Olá, sou o Consultor Leonardo. Notei que você esta navegando neste site a um tempo. Eu acabei de finalizar um atendimento e estou disponível. Posso te ajudar?</p>
-          </div>
+            <div class="message received">
+                <p>Olá, meu nome é Leonardo, sou consultor da Ajuda Cidadão, como posso ajudar?</p>
+            </div>
+            <div id="audioMessage" class="message received d-none">
+                <audio controls>
+                    <source src="assets/audio/audio_leo.opus" type="audio/ogg">
+                    Seu navegador não suporta a reprodução de áudio.
+                </audio>
+            </div>
         </div>
         <div class="chat-footer">
-          <input type="text" id="userMessage" placeholder="Escreva sua mensagem..." class="form-control">
-          <button id="sendMessage" class="btn btn-success">Enviar</button>
+            <input type="text" id="userMessage" placeholder="Escreva sua mensagem..." class="form-control">
+            <button id="sendMessage" class="btn btn-success">
+                <i class="fas fa-arrow-right"></i>
+            </button>
         </div>
-      </div>
+    </div>
 
     <!-- Scripts -->
     <script src="assets/js/nav.js"></script>
@@ -431,8 +485,7 @@
     <script>
         AOS.init({
             duration: 2000,
-        }
-        );
+        });
     </script>
 
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
@@ -445,6 +498,7 @@
             <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
+
 </body>
 
 </html>

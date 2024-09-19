@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'MinhaFonte';
     src: url('../assets/tpg/Comfortaa-Bold.ttf') format('woff2'),
-        url('../tpg/Comfortaa-Bold.woff') format('woff'),
-        url('../tpg/Comfortaa-Bold.ttf') format('truetype');
+         url('../tpg/Comfortaa-Bold.woff') format('woff'),
+         url('../tpg/Comfortaa-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -10,36 +10,42 @@
 /* General Styles */
 body {
     font-family: 'MinhaFonte', sans-serif;
-    line-height: 1.6;
+    line-height: 1.8; /* Increased for readability */
     color: #333;
     background-color: #f9f9f9;
+    padding-top: 60px; /* Adjust to avoid content behind navbar */
 }
 
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 25px; /* Increased gap for better spacing */
 }
 
 header nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #2A0944;
     font-weight: 600;
-    padding: 5px 10px;
-    transition: color 0.3s ease;
+    padding: 10px 15px; /* Increased padding for touch area */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px; /* Softer look for links */
+}
+
+header nav ul li a:hover {
+    color: #fff;
+    background-color: #007bff;
 }
 
 /* Navbar Styles */
 .navbar {
-    padding: 10px 0;
+    padding: 15px 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    transition: top 0.3s;
-    /* Transição suave ao esconder/mostrar */
     background-color: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .navbar-nav .nav-link {
@@ -49,52 +55,56 @@ header nav ul li a {
     color: #2A0944;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #007bff;
-}
-
 .navbar-toggler {
     border: none;
 }
 
+/* FAQ Section */
 .faq-section {
-    padding: 50px 0;
+    padding: 60px 0;
 }
 
 .faq-title {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: #2A0944;
-    /* Título em roxo escuro */
+    text-align: center;
+    font-size: 2rem; /* Larger for emphasis */
 }
 
 .card {
-    margin-bottom: 20px;
-    border: 1px solid #3FA796;
-    /* Borda verde água */
+    margin-bottom: 25px;
+    border: 2px solid #3FA796;
+    border-radius: 10px; /* Softer card edges */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
 }
 
 .card-header {
     background-color: #FEC260;
-    /* Fundo amarelo para o cabeçalho do card */
     color: #2A0944;
-    /* Texto em roxo escuro */
+    padding: 15px 20px; /* Increased padding for clickable area */
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 10px 10px 0 0; /* Rounded corners at the top */
 }
 
 .btn-link {
     color: #2A0944;
-    /* Cor do texto do botão do link */
+    text-decoration: none;
+    font-weight: 600;
 }
 
 .btn-link:hover {
     color: #3FA796;
-    /* Cor de hover para o texto do botão do link */
 }
 
 .card-body {
     background-color: #FFFFFF;
-    /* Fundo branco para o corpo do card */
     color: #2A0944;
-    /* Texto em roxo escuro */
+    padding: 20px;
 }
 
 /* Footer Styles */
@@ -102,10 +112,11 @@ footer {
     background-color: #343a40;
     color: #adb5bd;
     padding: 40px 0;
+    text-align: center; /* Center-align footer content */
 }
 
 footer h5 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #fff;
     margin-bottom: 1.5rem;
 }
@@ -113,7 +124,7 @@ footer h5 {
 footer p,
 footer li,
 footer a {
-    font-size: 0.9rem;
+    font-size: 1rem; /* Increased for readability */
     color: #adb5bd;
 }
 
@@ -123,7 +134,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #007bff;
+    color: #00bfff; /* Lighter hover effect */
 }
 
 footer ul {
@@ -135,16 +146,12 @@ footer ul li {
     margin-bottom: 0.8rem;
 }
 
-footer ul li i {
-    margin-right: 10px;
-}
-
 footer .fab {
     font-size: 1.5rem;
 }
 
 footer .fab:hover {
-    color: #007bff;
+    color: #00bfff;
 }
 
 footer hr {
