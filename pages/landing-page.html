@@ -56,12 +56,12 @@
                             <!-- Primeira Interação: Informar o saldo -->
                             <div class="mb-3">
                                 <label for="saldo" class="form-label">Informe seu saldo:</label>
-                                <input type="text" class="form-control" id="saldo" placeholder="Digite seu saldo" required>
+                                <input type="text" class="form-control" id="saldo" placeholder="Digite seu saldo" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                             </div>
                             <!-- Segunda Interação: Enviar o CPF -->
                             <div class="mb-3">
                                 <label for="cpf" class="form-label">Informe seu CPF:</label>
-                                <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF" maxlength="11" required>
+                                <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF" maxlength="11" required oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 11)">
                             </div>
                             <button type="button" class="btn btn-primary w-100" onclick="verificarSaldo()">Verificar Saldo</button>
                         </form>
