@@ -67,7 +67,13 @@ header nav ul li a:hover {
     padding: 160px 20px;
     text-align: center;
     position: relative;
-    height: 420px;
+    height: 450px;
+}
+
+@media (max-width: 600px) and (max-height: 700px) {
+    .hero {
+        height: 550px;
+    }
 }
 
 .hero::after {
