@@ -14,6 +14,51 @@
     <!-- Seu arquivo de estilo CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/aos.css">
+    <style>
+        .cont {
+            background-color: #2A0944;
+        }
+
+        .form-popup h2 {
+            color: #FEC260;
+        }
+
+        .form-popup button {
+            background: linear-gradient(45deg, #a8e063, #56ab2f, #a8e063);
+            background-size: 200% 200%;
+            animation: gradientAnimation 3s ease infinite;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            cursor: pointer;
+        }
+
+        .whatsapp-icon i {
+            color: #25D366;
+        }
+    </style>
 </head>
 
 <body>
@@ -78,16 +123,16 @@
             </div>
         </div>
     </nav>
-    <div class="cont" style="background-color: #2A0944;">
+    <div class="cont">
         <!-- Hero Section -->
         <section class="hero text-white text-center">
             <div class="container text-center mt-5">
                 <h2 class="display-5" data-aos="fade-down">Bem-vindo a Ajuda Cidadão</h2>
-                <p class="lead" data-aos="fade-top">Atendimento online ou presencial, você que escolhe! Todos nossos consultores são certificados pela FEBRABAN, LGPD e PLDFT.</p>
+                <p class="lead" data-aos="fade-top">Atendimento online ou presencial.Todos nossos consultores são certificados pela FEBRABAN, LGPD e PLDFT.</p>
                 <button class="hero-button" onclick="mostrarFormulario()">Selecione como podemos ajudar!</button>
             </div>
         </section>
-        <div class="container mt-5" style="background-color: #2A0944;">
+        <div class="container mt-5">
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="card text-center shadow-sm h-100">
@@ -138,7 +183,7 @@
     </div>
     <!-- Formulário que aparece ao clicar no botão -->
     <div class="form-popup" id="formHelp">
-        <h2 style="color: #FEC260;">Preencha Algumas Informações</h2>
+        <h2>Preencha Algumas Informações</h2>
         <div style="text-align: center;">
             <img src="assets/img/logotipo_sem_fundo/6 (2).png" style="width: 50px;" alt="Logotipo da empresa">
         </div>
@@ -159,16 +204,9 @@
                 <option value="Parcerias">Parcerias</option>
                 <option value="Outros">Outros</option>
             </select>
-            <button type="button" onclick="enviarWhatsApp()" style="background: linear-gradient(45deg, #a8e063, #56ab2f, #a8e063); background-size: 200% 200%; animation: gradientAnimation 3s ease infinite; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+            <button type="button" onclick="enviarWhatsApp()">
                 <i class="fab fa-whatsapp" style="margin-right: 5px;"></i> Enviar pelo WhatsApp
             </button>
-            <style>
-                @keyframes gradientAnimation {
-                    0% { background-position: 0% 50%; }
-                    50% { background-position: 100% 50%; }
-                    100% { background-position: 0% 50%; }
-                }
-            </style>
             <button type="button" class="close-btn" onclick="fecharFormulario()">Fechar</button>
         </form>
     </div>
@@ -261,7 +299,7 @@
                                 <i style="color:#3FA796;" class="fas fa-piggy-bank fa-3x" aria-label="Ícone de Auxílio Doença"></i>
                             </div>
                             <h5 class="card-title">Auxílio Doença</h5>
-                            <p class="card-text">Suporte exclusivo para situações de emergencia e enfermidade, afaste-se do trabalho com segurança</p>
+                            <p class="card-text">Suporte exclusivo para emergências e enfermidades.</p>
                             <button class="btn btn-primary" onclick="contactUs('Auxílio Doença')">Fale Conosco</button>
                         </div>
                     </div>
@@ -309,7 +347,7 @@
                                 <i style="color:#3FA796;" class="fas fa-car fa-3x" aria-label="Ícone de Portabilidade"></i>
                             </div>
                             <h5 class="card-title">Portabilidade</h5>
-                            <p class="card-text">Diminua a parcela dos seus imprestimos trazendo seu contrato para nosso banco.Taxa apartir de 1.30%</p>
+                            <p class="card-text">Reduza a parcela dos seus empréstimos. Taxa a partir de 1.30%</p>
                             <button class="btn btn-primary" onclick="contactUs('Portabilidade')">Fale Conosco</button>
                         </div>
                     </div>
@@ -321,7 +359,7 @@
                                 <i style="color:#3FA796;" class="fas fa-briefcase fa-3x" aria-label="Ícone de Pagamento de Conta"></i>
                             </div>
                             <h5 class="card-title">Pagamento de Conta</h5>
-                            <p class="card-text">Está com dificuldade em deixar suas cotas em dia clique aqui e fale com o consultor.</p>
+                            <p class="card-text">Dificuldade em pagar suas contas? Fale com o consultor.</p>
                             <button class="btn btn-primary" onclick="contactUs('Pagamento de Conta')">Fale Conosco</button>
                         </div>
                     </div>
@@ -353,7 +391,7 @@
                             <div class="icon-box" data-aos="fade-top">
                                 <i class="bi bi-eye" aria-label="Ícone de Visão"></i>
                                 <h4>Nossa Visão</h4>
-                                <p>Ser referência de agilidade, qualidade e eficiência na intermediação de crédito
+                                <p>Ser referência de qualidade e eficiência na intermediação de crédito
                                     consignado.</p>
                             </div>
                         </div>
@@ -420,7 +458,7 @@
                     </div>
                 </div>
                 <!-- Image Section -->
-                <div class="col-md-6">
+                <div class="col-md-6 mt-4 mt-md-0">
                     <img src="assets/img/images/pexels-photo-3768131.jpg" class="img-fluid rounded" alt="Imagem de uma pessoa segurando uma guitarra">
                 </div>
             </div>
@@ -559,9 +597,8 @@
         </div>
     </div>
     <!-- Ícone do WhatsApp -->
-    <div class="whatsapp-icon" style="position: fixed; bottom: 20px; left: 20px; cursor: pointer;"
-        onclick="window.open('https://wa.me/5513996679977?text=Olá%20Leonardo,%20venho%20pelo%20site%20do%20Ajuda%20cidadão.', '_blank')">
-        <i class="fab fa-whatsapp fa-3x" style="color: #25D366;" aria-label="Ícone do WhatsApp"></i>
+    <div class="whatsapp-icon" onclick="window.open('https://wa.me/5513996679977?text=Olá%20Leonardo,%20venho%20pelo%20site%20do%20Ajuda%20cidadão.', '_blank')">
+        <i class="fab fa-whatsapp fa-3x" aria-label="Ícone do WhatsApp"></i>
     </div>
 </body>
 

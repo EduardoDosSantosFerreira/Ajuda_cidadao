@@ -70,9 +70,9 @@ header nav ul li a:hover {
     height: 450px;
 }
 
-@media (max-width: 600px) and (max-height: 700px) {
+@media (max-width: 599px) {
     .hero {
-        height: 550px;
+        height: 600px;
     }
 }
 
