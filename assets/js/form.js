@@ -1,4 +1,3 @@
-
     function mostrarFormulario() {
         document.getElementById("formHelp").style.display = "block";
     }
@@ -37,6 +36,11 @@
     
         // Capitaliza a primeira letra de cada palavra
         input.value = input.value.replace(/\b\w/g, char => char.toUpperCase());
+
+        // Limita o nome a 35 caracteres
+        if (input.value.length > 35) {
+            input.value = input.value.slice(0, 35);
+        }
     }
     
     function validateCPF(input) {
@@ -48,4 +52,3 @@
             input.value = input.value.slice(0, 11);
         }
     }
-    
