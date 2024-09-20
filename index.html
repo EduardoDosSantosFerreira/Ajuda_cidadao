@@ -79,14 +79,14 @@
         </div>
     </nav>
     <div class="cont" style="background-color: #2A0944;">
-    <!-- Hero Section -->
-    <section class="hero text-white text-center">
-        <div class="container text-center mt-5">
-            <h2 class="display-5" data-aos="fade-down">Bem-vindo a Ajuda Cidadão</h2>
-            <p class="lead" data-aos="fade-top">Atendimento online ou presencial, você que escolhe! Todos nossos consultores são certificados pela FEBRABAN, LGPD e PLDFT.</p>
-            <button class="hero-button" onclick="mostrarFormulario()">Selecione como podemos ajudar!</button>
-        </div>
-    </section>
+        <!-- Hero Section -->
+        <section class="hero text-white text-center">
+            <div class="container text-center mt-5">
+                <h2 class="display-5" data-aos="fade-down">Bem-vindo a Ajuda Cidadão</h2>
+                <p class="lead" data-aos="fade-top">Atendimento online ou presencial, você que escolhe! Todos nossos consultores são certificados pela FEBRABAN, LGPD e PLDFT.</p>
+                <button class="hero-button" onclick="mostrarFormulario()">Selecione como podemos ajudar!</button>
+            </div>
+        </section>
         <div class="container mt-5" style="background-color: #2A0944;">
             <div class="row">
                 <div class="col-md-3">
@@ -96,12 +96,10 @@
                                 <i class="fas fa-car fa-3x" style="color:#FEC260;" aria-label="Ícone de Financiamento de Veículos"></i>
                             </div>
                             <h5 class="card-title" style="color: #4CAF50;">Financiamento de Veículos</h5>
-                            <p class="card-text">Aqui você encontra as melhores condições para financiar seu veículo.</p>
-                            <button class="btn-custom">Saiba Mais</button>
+                            <a href="https://wa.me/5513996679977?text=Ol%C3%A1%20venho%20pelo%20site%20do%20Ajuda%20Cidad%C3%A3o%20e%20quero%20saber%20sobre%20Financiamento%20de%20ve%C3%ADculo" class="btn-custom">Saiba Mais</a>
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-md-3">
                     <div class="card text-center shadow-sm h-100">
                         <div class="card-body">
@@ -109,8 +107,7 @@
                                 <i class="fas fa-piggy-bank fa-3x" style="color:#FEC260;" aria-label="Ícone de Empréstimo com Garantia do FGTS"></i>
                             </div>
                             <h5 class="card-title" style="color: #4CAF50;">Empréstimo com Garantia do FGTS</h5>
-                            <p class="card-text">Aproveite as taxas reduzidas com a garantia do seu FGTS.</p>
-                            <button class="btn-custom">Saiba Mais</button>
+                            <a href="https://wa.me/5513996679977?text=Ol%C3%A1%20venho%20pelo%20site%20do%20Ajuda%20Cidad%C3%A3o%20e%20quero%20saber%20sobre%20Empr%C3%A9stimo%20com%20Garantia%20do%20FGTS" class="btn-custom">Saiba Mais</a>
                         </div>
                     </div>
                 </div>
@@ -121,8 +118,7 @@
                                 <i class="fas fa-hand-holding-usd fa-3x" style="color:#FEC260;" aria-label="Ícone de Empréstimo Consignado INSS"></i>
                             </div>
                             <h5 class="card-title" style="color: #4CAF50;">Empréstimo Consignado INSS</h5>
-                            <p class="card-text">As melhores condições para aposentados e pensionistas do INSS.</p>
-                            <button class="btn-custom">Saiba Mais</button>
+                            <a href="https://wa.me/5513996679977?text=Ol%C3%A1%20venho%20pelo%20site%20do%20Ajuda%20Cidad%C3%A3o%20e%20quero%20saber%20sobre%20Empr%C3%A9stimo%20Consignado%20INSS" class="btn-custom">Saiba Mais</a>
                         </div>
                     </div>
                 </div>
@@ -133,77 +129,53 @@
                                 <i class="fas fa-university fa-3x" style="color:#FEC260;" aria-label="Ícone de Empréstimo para Servidores Públicos"></i>
                             </div>
                             <h5 class="card-title" style="color: #4CAF50;">Empréstimo para Servidores Públicos</h5>
-                            <p class="card-text">Condições especiais para servidores públicos.</p>
-                            <button class="btn-custom">Saiba Mais</button>
+                            <a href="https://wa.me/5513996679977?text=Ol%C3%A1%20venho%20pelo%20site%20do%20Ajuda%20Cidad%C3%A3o%20e%20quero%20saber%20sobre%20Empr%C3%A9stimo%20para%20Servidores%20P%C3%BAblicos" class="btn-custom">Saiba Mais</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-        <style>
-            .card {
-                border: none;
-                transition: transform 0.3s ease;
-            }
-            .card:hover {
-                transform: translateY(-10px);
-            }
-            .card .icon {
-                color: #FEC260;
-            }
-            .card-title {
-                color: #4CAF50;
-            }
-            .btn-custom {
-                background-color: #4CAF50;
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-            .btn-custom:hover {
-                background-color: #45a049;
-            }
-        </style>
+    <style>
 
-        <!-- Formulário que aparece ao clicar no botão -->
-        <div class="form-popup" id="formHelp">
-            <h2 style="color: #FEC260;">Preencha Algumas Informações</h2>
-            <div style="text-align: center;">
-                <img src="assets/img/logotipo_sem_fundo/6 (2).png" style="width: 50px;" alt="Logotipo da empresa">
-            </div>
-            <br>
-            <br>
-            <form id="helpForm">
-                <input type="text" id="nome" placeholder="Nome completo" required oninput="formatName(this)" aria-label="Nome completo">
-                <input type="text" id="cpf" placeholder="CPF" maxlength="11" required oninput="validateCPF(this)" aria-label="CPF">
-                <select id="problema" required aria-label="Selecione o problema">
-                    <option value="" disabled selected>Selecione o problema</option>
-                    <option value="Emprestimo Consignado">Emprestimo Consignado</option>
-                    <option value="Emprestimo Pessoal">Emprestimo pessoal</option>
-                    <option value="Empréstimo INSS">Empréstimo INSS</option>
-                    <option value="FGTS"> FGTS</option>
-                    <option value="INSS">INSS</option>
-                    <option value="Aposentadoria">Aposentadoria</option>
-                    <option value="Pagamento de conta">Pagamento de conta</option>
-                    <option value="Parcerias">Parcerias</option>
-                    <option value="Outros">Outros</option>
-                </select>
-                <button type="button" onclick="enviarWhatsApp()" style="background: linear-gradient(45deg, #a8e063, #56ab2f, #a8e063); background-size: 200% 200%; animation: gradientAnimation 3s ease infinite; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
-                    <i class="fab fa-whatsapp" style="margin-right: 5px;"></i> Enviar pelo WhatsApp
-                </button>
-                <style>
-                    @keyframes gradientAnimation {
-                        0% { background-position: 0% 50%; }
-                        50% { background-position: 100% 50%; }
-                        100% { background-position: 0% 50%; }
-                    }
-                </style>
-                <button type="button" class="close-btn" onclick="fecharFormulario()">Fechar</button>
-            </form>
+    </style>
+
+    <!-- Formulário que aparece ao clicar no botão -->
+    <div class="form-popup" id="formHelp">
+        <h2 style="color: #FEC260;">Preencha Algumas Informações</h2>
+        <div style="text-align: center;">
+            <img src="assets/img/logotipo_sem_fundo/6 (2).png" style="width: 50px;" alt="Logotipo da empresa">
         </div>
+        <br>
+        <br>
+        <form id="helpForm">
+            <input type="text" id="nome" placeholder="Nome completo" required oninput="formatName(this)" aria-label="Nome completo">
+            <input type="text" id="cpf" placeholder="CPF" maxlength="11" required oninput="validateCPF(this)" aria-label="CPF">
+            <select id="problema" required aria-label="Selecione o problema">
+                <option value="" disabled selected>Selecione o problema</option>
+                <option value="Emprestimo Consignado">Emprestimo Consignado</option>
+                <option value="Emprestimo Pessoal">Emprestimo pessoal</option>
+                <option value="Empréstimo INSS">Empréstimo INSS</option>
+                <option value="FGTS"> FGTS</option>
+                <option value="INSS">INSS</option>
+                <option value="Aposentadoria">Aposentadoria</option>
+                <option value="Pagamento de conta">Pagamento de conta</option>
+                <option value="Parcerias">Parcerias</option>
+                <option value="Outros">Outros</option>
+            </select>
+            <button type="button" onclick="enviarWhatsApp()" style="background: linear-gradient(45deg, #a8e063, #56ab2f, #a8e063); background-size: 200% 200%; animation: gradientAnimation 3s ease infinite; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+                <i class="fab fa-whatsapp" style="margin-right: 5px;"></i> Enviar pelo WhatsApp
+            </button>
+            <style>
+                @keyframes gradientAnimation {
+                    0% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                    100% { background-position: 0% 50%; }
+                }
+            </style>
+            <button type="button" class="close-btn" onclick="fecharFormulario()">Fechar</button>
+        </form>
+    </div>
     </section>
     <!-- Serviços -->
     <section id="servicos" class="py-5">
@@ -230,7 +202,7 @@
                                 <i style="color:#FEC260;" class="fas fa-wallet fa-3x" aria-label="Ícone de Empréstimo Pessoal"></i>
                             </div>
                             <h5 class="card-title">Empréstimo Pessoal</h5>
-                            <p class="card-text">Você sabia que existe o emprestimo descontado da fatura de energia? clique e simule !</p>
+                            <p class="card-text">Empréstimo descontado na fatura de energia. Clique e simule!</p>
                             <button class="btn btn-primary" onclick="contactUs('Empréstimo Pessoal')">Fale Conosco</button>
                         </div>
                     </div>
@@ -242,7 +214,7 @@
                                 <i style="color:#FEC260;" class="fas fa-briefcase fa-3x" aria-label="Ícone de Saque FGTS"></i>
                             </div>
                             <h5 class="card-title">Saque FGTS</h5>
-                            <p class="card-text">Tem saldo parado? Que tal colocar em movimento simulação gratuita tempo médio de resposta 1 minuto apenas!</p>
+                            <p class="card-text">Saldo parado? Simulação gratuita com resposta em 1 minuto!</p>
                             <button class="btn btn-primary" onclick="contactUs('Saque FGTS')">Fale Conosco</button>
                         </div>
                     </div>
@@ -266,7 +238,7 @@
                                 <i style="color:#FEC260;" class="fas fa-user-tie fa-3x" aria-label="Ícone de Aposentadorias"></i>
                             </div>
                             <h5 class="card-title">Aposentadorias</h5>
-                            <p class="card-text">Aqui você vai ser aposentar com maior salário obtendo um atendimento exclusivo e agil.</p>
+                            <p class="card-text">Aposente-se com maior salário e atendimento exclusivo.</p>
                             <button class="btn btn-primary" onclick="contactUs('Aposentadorias')">Fale Conosco</button>
                         </div>
                     </div>
@@ -589,12 +561,12 @@
         <div vw-plugin-wrapper>
             <div class="vw-plugin-top-wrapper"></div>
         </div>
-        </div>
-        <!-- Ícone do WhatsApp -->
-        <div class="whatsapp-icon" style="position: fixed; bottom: 20px; left: 20px; cursor: pointer;"
-            onclick="window.open('https://wa.me/5513996679977?text=Olá%20Leonardo,%20venho%20pelo%20site%20do%20Ajuda%20cidadão.', '_blank')">
-            <i class="fab fa-whatsapp fa-3x" style="color: #25D366;" aria-label="Ícone do WhatsApp"></i>
-        </div>
-        </body>
-        
-        </html>
+    </div>
+    <!-- Ícone do WhatsApp -->
+    <div class="whatsapp-icon" style="position: fixed; bottom: 20px; left: 20px; cursor: pointer;"
+        onclick="window.open('https://wa.me/5513996679977?text=Olá%20Leonardo,%20venho%20pelo%20site%20do%20Ajuda%20cidadão.', '_blank')">
+        <i class="fab fa-whatsapp fa-3x" style="color: #25D366;" aria-label="Ícone do WhatsApp"></i>
+    </div>
+</body>
+
+</html>

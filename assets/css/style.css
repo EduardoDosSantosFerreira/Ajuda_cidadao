@@ -67,6 +67,7 @@ header nav ul li a:hover {
     padding: 160px 20px;
     text-align: center;
     position: relative;
+    height: 420px;
 }
 
 .hero::after {
@@ -750,4 +751,28 @@ h1 {
 }
 .dark-mode .faq-section h2, .dark-mode .faq-section p {
     color: #000000;
+}
+.card {
+    border: none;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+.card .icon {
+    color: #FEC260;
+}
+.card a {
+    text-decoration: none;
+}
+.btn-custom {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-custom:hover {
+    background-color: #45a049;
 }
