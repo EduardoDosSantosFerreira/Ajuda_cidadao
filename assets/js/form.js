@@ -1,9 +1,20 @@
     function mostrarFormulario() {
-        document.getElementById("formHelp").style.display = "block";
+        const form = document.getElementById("formHelp");
+        form.style.display = "block";
+        form.style.opacity = 0;
+        form.style.transition = "opacity 0.5s ease-in-out";
+        setTimeout(() => {
+            form.style.opacity = 1;
+        }, 10);
     }
 
     function fecharFormulario() {
-        document.getElementById("formHelp").style.display = "none";
+        const form = document.getElementById("formHelp");
+        form.style.opacity = 0;
+        form.style.transition = "opacity 0.5s ease-in-out";
+        setTimeout(() => {
+            form.style.display = "none";
+        }, 500);
     }
 
     function enviarWhatsApp() {
