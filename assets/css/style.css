@@ -530,7 +530,6 @@ footer hr {
 
 .hero-section {
   height: 850px;
-  background: linear-gradient(45deg, #2a0944, #4e2ab2, #2a0944, #4e2ab2);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
   color: white;
