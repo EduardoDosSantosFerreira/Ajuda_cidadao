@@ -14,9 +14,6 @@
     <!-- Seu arquivo de estilo CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/aos.css">
-    <style>
-
-    </style>
 </head>
 
 <body>
@@ -60,24 +57,6 @@
                         <i class="fas fa-moon"></i>
                     </button>
                 </div>
-                <script>
-                    let fontSize = 1;
-                    function aumentarTexto() {
-                        if (fontSize < 3) {
-                            fontSize += 0.1;
-                            document.body.style.fontSize = fontSize + 'em';
-                        }
-                    }
-                    function diminuirTexto() {
-                        if (fontSize > 0.7) {
-                            fontSize -= 0.1;
-                            document.body.style.fontSize = fontSize + 'em';
-                        }
-                    }
-                    function toggleDarkMode() {
-                        document.body.classList.toggle('dark-mode');
-                    }
-                </script>
             </div>
         </div>
     </nav>
@@ -85,7 +64,7 @@
         <!-- Hero Section -->
         <section class="hero text-white text-center">
             <div class="container text-center mt-5">
-                <h2 class="display-5" data-aos="fade-down">Bem-vindo a Ajuda Cidadão</h2>
+                <h1 class="display-2" data-aos="fade-down">Bem-vindo a Ajuda Cidadão</h1>
                 <p class="lead" data-aos="fade-top">Atendimento online ou presencial. Todos nossos consultores são certificados pela FEBRABAN, LGPD e PLDFT.</p>
                 <button class="hero-button" onclick="mostrarFormulario()">Selecione como podemos ajudar!</button>
             </div>
@@ -526,21 +505,23 @@
             </button>
         </div>
     </div>
-
+    <!-- Ícone do WhatsApp -->
+    <div class="whatsapp-icon" onclick="window.open('https://wa.me/5513996679977?text=Olá%20Leonardo,%20venho%20pelo%20site%20do%20Ajuda%20cidadão.', '_blank')">
+        <i class="fab fa-whatsapp fa-3x" aria-label="Ícone do WhatsApp"></i>
+    </div>
     <!-- Scripts -->
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/botao.js"></script>
     <script src="assets/js/form.js"></script>
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/poppup.js"></script>
+    <script src="assets/js/darkmode.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/securaty.js"></script>
     <script>
         AOS.init({
             duration: 2000,
         });
     </script>
-
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
@@ -551,10 +532,7 @@
             <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
-    <!-- Ícone do WhatsApp -->
-    <div class="whatsapp-icon" onclick="window.open('https://wa.me/5513996679977?text=Olá%20Leonardo,%20venho%20pelo%20site%20do%20Ajuda%20cidadão.', '_blank')">
-        <i class="fab fa-whatsapp fa-3x" aria-label="Ícone do WhatsApp"></i>
-    </div>
+
 </body>
 
 </html>
