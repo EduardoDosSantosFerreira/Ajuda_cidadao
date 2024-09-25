@@ -18,19 +18,44 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
-        <div class="container"> <!-- Logo da Empresa --> <a class="navbar-brand" href="#"> <img
-                    src="../assets/img/logotipo_sem_fundo/1 (2).png" alt="Logo Finanças Inteligentes" width="250"
-                    height="auto"> </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+        <div class="container">
+            <!-- Logo da Empresa -->
+            <a class="navbar-brand" href="#">
+                <img src="../assets/img/logotipo_sem_fundo/1 (2).png" alt="Logotipo Ajuda Cidadão" width="250" height="auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"> <a class="nav-link" href="../index.html">Início</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="../index.html#servicos">Serviços</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#Footer">Contato</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="../pages/faq.html">Perguntas Frequentes</a> </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#servicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#Footer">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/faq.html">Perguntas Frequentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/landing-page.html">Simulação</a>
+                    </li>
                 </ul>
+                <div class="d-flex align-items-center ms-3">
+                    <button class="btn btn-outline-secondary me-2" onclick="diminuirTexto()">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button class="btn btn-outline-secondary me-2" onclick="aumentarTexto()">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button class="btn btn-outline-secondary" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -171,30 +196,12 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script>
-        // Variáveis para armazenar a posição anterior do scroll e a barra de navegação
-        let prevScrollPos = window.pageYOffset;
-        const navbar = document.querySelector('.navbar');
-
-        // Função para controlar o scroll
-        window.onscroll = function () {
-            const currentScrollPos = window.pageYOffset;
-
-            // Se o usuário rolar para baixo, a navbar desaparece
-            if (prevScrollPos < currentScrollPos) {
-                navbar.style.top = "-100px"; // Esconde a navbar (ajuste o valor para o tamanho da sua navbar)
-            } else {
-                navbar.style.top = "0"; // Mostra a navbar
-            }
-
-            prevScrollPos = currentScrollPos;
-        };
-    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/securaty.js"></script>
+    <script src="../assets/js/nav.js"></script>
+    <script src="../assets/js/darkmode.js"></script>
 </body>
 
 </html>
