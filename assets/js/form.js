@@ -31,14 +31,6 @@ function enviarWhatsApp() {
   }
 }
 
-function formatName(input) {
-  // Remove qualquer caractere que não seja uma letra
-  input.value = input.value.replace(/[^a-zA-Z\s]/g, '');
-
-  // Capitaliza a primeira letra de cada palavra
-  input.value = input.value.replace(/\b\w/g, char => char.toUpperCase());
-}
-
 function validateCPF(input) {
   // Remove caracteres não numéricos
   input.value = input.value.replace(/\D/g, '');
