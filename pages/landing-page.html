@@ -2,18 +2,19 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Metadados essenciais para o HTML -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ajuda Cidadão</title>
+    <!-- Ícone do site -->
     <link rel="icon" type="image/png" sizes="30x30" href="../assets/img/logotipo_sem_fundo/6 (2).png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome CSS (para os ícones) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../assets/css/faq.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="../assets/css/landing.css">
 </head>
 
 <body>
@@ -24,9 +25,11 @@
             <a class="navbar-brand" href="#">
                 <img src="../assets/img/logotipo_sem_fundo/1 (2).png" alt="Logo Finanças Inteligentes" width="250" height="auto">
             </a>
+            <!-- Botão para colapsar a navbar em dispositivos móveis -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Links da navbar -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -46,9 +49,11 @@
         </div>
     </nav>
 
+    <!-- Container principal -->
     <div class="container saldo-container">
         <div class="row justify-content-center">
             <div class="col-md-6">
+                <!-- Card para verificação de saldo -->
                 <div class="card saldo-card shadow-lg">
                     <div class="card-body">
                         <h2 class="text-center mb-4 saldo-title">Verifique seu Saldo</h2>
@@ -63,6 +68,7 @@
                                 <label for="cpf" class="form-label saldo-label">Informe seu CPF:</label>
                                 <input type="text" class="form-control saldo-input" id="cpf" placeholder="Digite seu CPF" maxlength="11" required oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 11)">
                             </div>
+                            <!-- Botão para verificar saldo -->
                             <button type="button" class="btn btn-primary w-100 saldo-button" onclick="verificarSaldo()">Verificar Saldo</button>
                         </form>
 
@@ -81,89 +87,40 @@
         </div>
     </div>
 
-    <style>
-        .saldo-container {
-            padding-top: 100px;
-        }
-
-        .saldo-card {
-            background-color: #FFFFFF;
-            border: 2px solid #3FA796;
-            border-radius: 10px;
-        }
-
-        .saldo-title {
-            color: #2A0944;
-        }
-
-        .saldo-label {
-            color: #2A0944;
-        }
-
-        .saldo-input {
-            border: 1px solid #3FA796;
-            border-radius: 5px;
-        }
-
-        .saldo-button {
-            background-color: #3FA796;
-            color: #FFFFFF;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .saldo-button:hover {
-            background-color: #2A0944;
-            color: #FEC260;
-        }
-
-        .saldo-resultado {
-            color: #2A0944;
-        }
-
-        .contratar-button {
-            background-color: #FEC260;
-            color: #2A0944;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .contratar-button:hover {
-            background-color: #2A0944;
-            color: #FEC260;
-        }
-    </style>
-
+    <!-- Script para verificar saldo -->
     <script>
+        // Função para verificar o saldo informado e exibir um saldo fantasia
         function verificarSaldo() {
-            const saldo = document.getElementById('saldo').value;
-            const cpf = document.getElementById('cpf').value;
-            if (saldo && cpf.length === 11) {
+            const saldo = document.getElementById('saldo').value; // Obtém o valor do saldo informado pelo usuário
+            const cpf = document.getElementById('cpf').value; // Obtém o CPF informado pelo usuário
+            if (saldo && cpf.length === 11) { // Verifica se o saldo foi informado e se o CPF tem 11 dígitos
                 // Simulação de retorno de saldo fantasia baseado no saldo informado
-                const saldoFantasia = (parseFloat(saldo) * (1 + Math.random() * 0.2)).toFixed(2);
-                document.getElementById('saldoFantasia').innerText = saldoFantasia;
-                document.getElementById('resultadoSaldo').style.display = 'block';
-                document.getElementById('erroSaldo').style.display = 'none';
+                const saldoFantasia = (parseFloat(saldo) * (1 + Math.random() * 0.2)).toFixed(2); // Calcula um saldo fantasia
+                document.getElementById('saldoFantasia').innerText = saldoFantasia; // Exibe o saldo fantasia na página
+                document.getElementById('resultadoSaldo').style.display = 'block'; // Mostra a seção de resultado do saldo
+                document.getElementById('erroSaldo').style.display = 'none'; // Esconde a mensagem de erro
             } else {
-                document.getElementById('resultadoSaldo').style.display = 'none';
-                document.getElementById('erroSaldo').style.display = 'block';
+                document.getElementById('resultadoSaldo').style.display = 'none'; // Esconde a seção de resultado do saldo
+                document.getElementById('erroSaldo').style.display = 'block'; // Mostra a mensagem de erro
             }
         }
 
+        // Função para abrir o WhatsApp com uma mensagem pré-formatada
         function contratarAgora() {
-            const cpf = document.getElementById('cpf').value;
-            const saldoInformado = document.getElementById('saldo').value;
-            const saldoDisponivel = document.getElementById('saldoFantasia').innerText;
+            const cpf = document.getElementById('cpf').value; // Obtém o CPF informado pelo usuário
+            const saldoInformado = document.getElementById('saldo').value; // Obtém o saldo informado pelo usuário
+            const saldoDisponivel = document.getElementById('saldoFantasia').innerText; // Obtém o saldo fantasia exibido
+            // Cria uma mensagem com as informações do usuário
             const mensagem = `Olá, meu CPF é ${cpf}, meu saldo informado é R$ ${saldoInformado} e meu saldo disponível para saque é R$ ${saldoDisponivel}.`;
+            // Cria uma URL para abrir o WhatsApp com a mensagem pré-formatada
             const url = `https://wa.me/5513996679977?text=${encodeURIComponent(mensagem)}`;
-            window.open(url, '_blank');
+            window.open(url, '_blank'); // Abre a URL em uma nova aba
         }
     </script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/securaty.js"></script>
+    <!-- Eduardo Dos Santos Ferreira -->
 </body>
 </html>
